@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'OSeongandHanEum-Regular';
+    src: url('../fonts/OSeongandHanEum-Regular.eot');
+    src: url('../fonts/OSeongandHanEum-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OSeongandHanEum-Regular.svg#OSeongandHanEum-Regular') format('svg'),
+         url('../fonts/OSeongandHanEum-Regular.ttf') format('truetype'),
+         url('../fonts/OSeongandHanEum-Regular.woff') format('woff'),
+         url('../fonts/OSeongandHanEum-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Makgeolli';
+    src: url('../fonts/Makgeolli.woff');
+    src: url('../fonts/Makgeolli.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+.font_01{
+    font-family: 'Makgeolli'; 
+    font-size:15px; 
+    font-weight:300;
+    border:3px solid #ccc;
+}
+  
+
+body {
+    font-family: 'OSeongandHanEum-Regular', "Open Sans", sans-serif;
+    color: #444;
+  }
+
+h1, h2, h3, h4, h5, h6, .font-primary {
+    font-family:'OSeongandHanEum-Regular', "Roboto", sans-serif;
+  }
+
+  .portfolio #portfolio-flters li {
+    cursor: pointer;
+    margin: 0 12px 5px 12px;
+    display: inline-block;
+    padding: 0 4px 6px 4px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #444;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid #fff;
+    font-family: 'OSeongandHanEum-Regular',"Roboto", sans-serif;
+  }
+  
