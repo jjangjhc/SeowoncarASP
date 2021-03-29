@@ -9,14 +9,14 @@
     <div class="container">
 
       <div class="logo float-left">
-        <h1 class="text-light"><a href="index.html"><span>Seowoncar</span></a></h1>
+        <h1 class="text-light"><a href="Default.aspx"><span>Seowoncar</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">홈</a></li>
+          <li class="active"><a href="Default.aspx">홈</a></li>
           <li><a href="about.html">서원폐차장</a></li>
           <li><a href="services.html">폐차안내</a></li>
           <li><a href="portfolio.html">부품 둘러보기</a></li>
