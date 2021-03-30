@@ -105,6 +105,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.png" />
+    <Content Include="Portfolio.aspx" />
+    <Content Include="Services.aspx" />
     <Content Include="About.aspx" />
     <Content Include="about.html" />
     <Content Include="assets\css\style.css" />
@@ -257,8 +260,9 @@
     <Content Include="fonts\OSeongandHanEum-Regular.ttf" />
     <Content Include="fonts\OSeongandHanEum-Regular.woff" />
     <Content Include="fonts\OSeongandHanEum-Regular.woff2" />
-    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
-    <None Include="Properties\PublishProfiles\FTPProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\SeowoncarASP-khyo1.pubxml" />
+    <None Include="Properties\PublishProfiles\WMware.pubxml" />
+    <None Include="Properties\PublishProfiles\SeowoncarASP-CAFE24.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="index-2.html" />
     <Content Include="index-old.html" />
@@ -302,6 +306,20 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Portfolio.aspx.cs">
+      <DependentUpon>Portfolio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portfolio.aspx.designer.cs">
+      <DependentUpon>Portfolio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>

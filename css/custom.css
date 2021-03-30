@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
     background: #8dbad2;
 }
 
-#footer .footer-newsletter .emailSubscribe input[type="submit"] {
+#footer .footer-newsletter .emailSubscribe input[type="button"] {
     position: absolute;
     top: 0;
     right: 0;
@@ -93,3 +93,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
     border-radius: 50px;
 }
 
+
+.emailRealSize {
+    font-size: 1vw;
+}

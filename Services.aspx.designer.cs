@@ -11,7 +11,7 @@ namespace SeowoncarASP
 {
 
 
-    public partial class Contact
+    public partial class Services
     {
     }
 }
