@@ -48,4 +48,48 @@ h1, h2, h3, h4, h5, h6, .font-primary {
     border-bottom: 2px solid #fff;
     font-family: 'OSeongandHanEum-Regular',"Roboto", sans-serif;
   }
-  
+
+
+.contact .php-email-form button[type="button"] {
+    background: #68A4C4;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.contact .php-email-form button[type="button"]:hover {
+    background: #8dbad2;
+}
+
+#footer .footer-newsletter .emailSubscribe input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    padding: 0 20px;
+    margin: 3px;
+    background: #68A4C4;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+#footer .footer-newsletter .emailSubscribe input[type="email"] {
+    border: 0;
+    padding: 4px;
+    width: calc(100% - 100px);
+}
+
+
+.emailSubscribe {
+    margin-top: 30px;
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 50px;
+}
+
