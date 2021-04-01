@@ -19,6 +19,15 @@ namespace SeowoncarASP
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var AlternateView = "Desktop";
+            var switchViewRouteName = "AspNet.FriendlyUrls.SwitchView";
+            var url = GetRouteUrl(switchViewRouteName, new { view = AlternateView, __FriendlyUrls_SwitchViews = true });
+            url += "?ReturnUrl=" + HttpUtility.UrlEncode(Request.RawUrl);
+            Response.Redirect(url);
+
+
+            /*
+
             // Determine current view
             var isMobile = WebFormsFriendlyUrlResolver.IsMobileView(new HttpContextWrapper(Context));
             CurrentView = isMobile ? "Mobile" : "Desktop";
@@ -38,6 +47,9 @@ namespace SeowoncarASP
             var url = GetRouteUrl(switchViewRouteName, new { view = AlternateView, __FriendlyUrls_SwitchViews = true });
             url += "?ReturnUrl=" + HttpUtility.UrlEncode(Request.RawUrl);
             SwitchUrl = url;
+
+            */
+
         }
     }
 }

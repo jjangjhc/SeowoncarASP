@@ -451,7 +451,7 @@
           <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/service-details-4.jpg" alt="...">
+                <img src="assets/img/service-details-5.jpg" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="#">과태료</a></h5>
@@ -598,7 +598,7 @@
 		  <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/service-details-4.jpg" alt="...">
+                <img src="assets/img/service-details-6.jpg" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="#">유의사항</a></h5>

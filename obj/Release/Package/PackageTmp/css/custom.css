@@ -95,5 +95,16 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 
 .emailRealSize {
-    font-size: 1vw;
+    font-size: 1em;
+}
+
+
+#hero::after {
+    background-size: 100%;
+}
+
+
+.mobile-nav-toggle i {
+    font-size: 1.8em;
+    margin-right: -10px;
 }

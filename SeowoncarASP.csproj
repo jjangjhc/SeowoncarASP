@@ -105,6 +105,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\img\portfolio\portfolio-10.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-11.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-12.jpg" />
+    <Content Include="assets\img\service-details-5.jpg" />
+    <Content Include="assets\img\service-details-6.jpg" />
     <Content Include="favicon.png" />
     <Content Include="Portfolio.aspx" />
     <Content Include="Services.aspx" />
@@ -260,6 +265,7 @@
     <Content Include="fonts\OSeongandHanEum-Regular.ttf" />
     <Content Include="fonts\OSeongandHanEum-Regular.woff" />
     <Content Include="fonts\OSeongandHanEum-Regular.woff2" />
+    <Content Include="Portfolio-details.aspx" />
     <None Include="Properties\PublishProfiles\SeowoncarASP-khyo1.pubxml" />
     <None Include="Properties\PublishProfiles\WMware.pubxml" />
     <None Include="Properties\PublishProfiles\SeowoncarASP-CAFE24.pubxml" />
@@ -367,6 +373,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Portfolio-details.aspx.cs">
+      <DependentUpon>Portfolio-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portfolio-details.aspx.designer.cs">
+      <DependentUpon>Portfolio-details.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

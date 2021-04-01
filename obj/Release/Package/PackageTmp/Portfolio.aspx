@@ -30,171 +30,171 @@
           <div class="col-lg-12">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">전체</li>
-              <li data-filter=".filter-app">현대</li>
+              <li data-filter=".filter-hyundai">현대</li>
               <li data-filter=".filter-kia">기아</li>
-              <li data-filter=".filter-card">르노삼성</li>
-              <li data-filter=".filter-web">대우</li>
-              <li data-filter=".filter-web">대창</li>
-              <li data-filter=".filter-web">쉐보레GM</li>
-              <li data-filter=".filter-web">쌍용</li>
-              <li data-filter=".filter-web">수입</li>
+              <li data-filter=".filter-samsung">르노삼성</li>
+              <li data-filter=".filter-daewoo">대우</li>
+              <li data-filter=".filter-daechang">대창</li>
+              <li data-filter=".filter-chevrolet">쉐보레GM</li>
+              <li data-filter=".filter-ssangyong">쌍용</li>
+              <li data-filter=".filter-foreign">수입</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
 
-          <div class="col-lg-4 col-md-6 filter-app">
+          <div class="col-lg-4 col-md-6 filter-hyundai">
             <div class="portfolio-item">
               <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1">App 1</a></h3>
+                <h3><a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="현대">현대</a></h3>
                 <div>
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="현대"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.aspx" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 filter-card">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2">Card xxx</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-card">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2">Card yyy</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>			
-          
           <div class="col-lg-4 col-md-6 filter-kia">
-            <div class="portfolio-item">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2">kia!!</a></h3>
-                <div>
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>			
-          
-          <div class="col-lg-4 col-md-6 filter-web">
             <div class="portfolio-item">
               <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3">Web 3</a></h3>
+                <h3><a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="기아">기아</a></h3>
                 <div>
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="기아"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.aspx" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 filter-app">
+          <div class="col-lg-4 col-md-6 filter-samsung">
             <div class="portfolio-item">
               <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2">App 2</a></h3>
+                <h3><a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="삼성">삼성</a></h3>
                 <div>
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="삼성"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.aspx" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-card">
+          </div>			
+          
+          <div class="col-lg-4 col-md-6 filter-daewoo">
             <div class="portfolio-item">
               <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2">Card 2</a></h3>
+                <h3><a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="대우">대우</a></h3>
                 <div>
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="대우"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.aspx" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 filter-web">
+          </div>			
+          
+          <div class="col-lg-4 col-md-6 filter-daechang">
             <div class="portfolio-item">
               <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2">Web 2</a></h3>
+                <h3><a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="대창">대창</a></h3>
                 <div>
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="대창"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.aspx" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 filter-app">
+          <div class="col-lg-4 col-md-6 filter-chevrolet">
             <div class="portfolio-item">
               <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3">App 3</a></h3>
+                <h3><a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="쉐보레">쉐보레</a></h3>
                 <div>
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="쉐보레"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.aspx" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 filter-card">
+          <div class="col-lg-4 col-md-6 filter-ssangyong">
             <div class="portfolio-item">
               <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1">Card 1</a></h3>
+                <h3><a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="쌍용">쌍용</a></h3>
                 <div>
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="쌍용"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.aspx" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 filter-card">
+          <div class="col-lg-4 col-md-6 filter-foreign">
             <div class="portfolio-item">
               <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3">Card 3</a></h3>
+                <h3><a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="외제차">외제차</a></h3>
                 <div>
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="외제차"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.aspx" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 filter-web">
+          <div class="col-lg-4 col-md-6 filter-foreign">
             <div class="portfolio-item">
               <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h3><a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 1">Web 1</a></h3>
+                <h3><a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="외제차">외제차</a></h3>
                 <div>
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="외제차"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.aspx" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 filter-hyundai">
+            <div class="portfolio-item">
+              <img src="assets/img/portfolio/portfolio-10.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h3><a href="assets/img/portfolio/portfolio-10.jpg" data-gall="portfolioGallery" class="venobox" title="현대 1">현대</a></h3>
+                <div>
+                  <a href="assets/img/portfolio/portfolio-10.jpg" data-gall="portfolioGallery" class="venobox" title="현대 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.aspx" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 filter-kia">
+            <div class="portfolio-item">
+              <img src="assets/img/portfolio/portfolio-11.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h3><a href="assets/img/portfolio/portfolio-11.jpg" data-gall="portfolioGallery" class="venobox" title="기아 3">기아</a></h3>
+                <div>
+                  <a href="assets/img/portfolio/portfolio-11.jpg" data-gall="portfolioGallery" class="venobox" title="기아 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.aspx" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 filter-kia">
+            <div class="portfolio-item">
+              <img src="assets/img/portfolio/portfolio-12.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h3><a href="assets/img/portfolio/portfolio-12.jpg" data-gall="portfolioGallery" class="venobox" title="기아">기아</a></h3>
+                <div>
+                  <a href="assets/img/portfolio/portfolio-12.jpg" data-gall="portfolioGallery" class="venobox" title="기아"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.aspx" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
