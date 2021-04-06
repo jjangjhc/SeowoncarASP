@@ -106,5 +106,28 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 .mobile-nav-toggle i {
     font-size: 1.8em;
-    margin-right: -10px;
+}
+
+.mobile-nav-toggle {
+    float: right;
+    margin-right: 13px;
+    position: unset;
+}
+
+
+#header .logo img {
+    padding: 0;
+    margin: 0;
+    max-height: 40px;
+    margin-top: -5px;
+}
+
+#header .logo h1 {
+    font-size: 30px;
+    margin: 0;
+    padding: 4px 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }

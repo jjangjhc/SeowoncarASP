@@ -407,6 +407,7 @@
     <Folder Include="assets\vendor\php-email-form\_notes\" />
     <Folder Include="assets\vendor\venobox\_notes\" />
     <Folder Include="assets\vendor\waypoints\_notes\" />
+    <Folder Include="board\upload\" />
     <Folder Include="css\_notes\" />
     <Folder Include="fonts\ttf\_notes\" />
     <Folder Include="fonts\_notes\" />

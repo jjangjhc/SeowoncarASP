@@ -56,24 +56,24 @@
 
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-6" id="sendMail" runat="server">
             <div role="form" class="php-email-form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="이름" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="이름" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required />
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="이메일 주소" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="이메일 주소" data-rule="email" data-msg="Please enter a valid email" required />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="제목" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="제목" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="보낼 메시지"></textarea>
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="보낼 메시지" required></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
@@ -81,8 +81,18 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="button">메일 보내기</button></div>
+              <div class="text-center"><button type="submit">메일 보내기</button></div>
             </div>
+          </div>
+    
+          <div class="col-lg-6" id="sendMailNone"  runat="server">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-comment-check"></i>
+                  <h3>메일 보내기가 완료되었습니다.</h3>
+                </div>
+              </div>              
+              
           </div>
 
         </div>

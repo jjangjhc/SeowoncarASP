@@ -10,6 +10,7 @@ namespace SeowoncarASP
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            //모바일 페이지를 사용하지 않기
             var settings = new FriendlyUrlSettings();
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);

@@ -27,29 +27,57 @@
         <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="assets/img/portfolio/portfolio-details-1.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt="">
+            <img src="board/upload/2021/04/062250123_1.jpg" class="img-fluid" alt="">
+            <img src="board/upload/2021/04/062250123_2.jpg" class="img-fluid" alt="">
+            <img src="board/upload/2021/04/062250123_3.jpg" class="img-fluid" alt="">
           </div>
 
           <div class="portfolio-info">
             <h3>제품 정보</h3>
             <ul>
-              <li><strong>Category</strong>: - </li>
-              <li><strong>Client</strong>: - </li>
-              <li><strong>Project date</strong>: - </li>
-              <li><strong>Project URL</strong>: <a href="#"> - </a></li>
+              <li><strong>제조사</strong>: 삼성대우현대기아 </li>
+              <li><strong>차량명</strong>: - </li>
+              <li><strong>연식</strong>: - </li>
+              <li><strong>파트넘버</strong>: - </li>
+              
+              <li><strong>차대번호</strong>: <a href="#"> - </a></li>
+                <li><strong>상품정보</strong>: - </li>
+                <li><strong>관리번호</strong>: - </li>
+
             </ul>
           </div>
 
         </div>
-
+          
         <div class="portfolio-description">
-          <h2>상세설명 페이지는 아직 작업중입니다.</h2>
+          <h2>상세정보</h2>
           <p>
-            주비가 되면 안내하도록 하겠습니다. 감사합니다.
+             - 
           </p>
         </div>
+
+          
+        <div class="portfolio-description">
+          <h2>보증 및 반품 교환</h2>
+          <p>
+            - 
+          </p>
+        </div>
+
+        <div class="portfolio-description">
+          <h2>배송안내</h2>
+          <p>
+            - 
+          </p>
+        </div>
+
+        <div class="portfolio-description">
+          <h2>상품QNA</h2>
+          <p>
+            - 
+          </p>
+        </div>
+
       </div>
     </section><!-- End Portfolio Details Section -->
 
