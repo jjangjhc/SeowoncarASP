@@ -3,7 +3,7 @@
 
     
   <main id="main">
-
+      
     <!-- ======= Our Portfolio Section ======= -->
     <section class="breadcrumbs">
       <div class="container">
@@ -26,32 +26,65 @@
 
         <div class="portfolio-details-container">
 
-          <div class="owl-carousel portfolio-details-carousel">
-            <img src="assets/img/portfolio/portfolio-details-1.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt="">
+          <div class="owl-carousel portfolio-details-carousel" id="imgParent" runat="server">
+            <img src="board/upload/2021/04/062250123_1.jpg" class="img-fluid" alt="">
+            <img src="board/upload/2021/04/062250123_2.jpg" class="img-fluid" alt="">
+            <img src="board/upload/2021/04/062250123_3.jpg" class="img-fluid" alt="">
           </div>
-
+            
           <div class="portfolio-info">
             <h3>제품 정보</h3>
             <ul>
-              <li><strong>Category</strong>: - </li>
-              <li><strong>Client</strong>: - </li>
-              <li><strong>Project date</strong>: - </li>
-              <li><strong>Project URL</strong>: <a href="#"> - </a></li>
+              <li><strong>제조사</strong>: <asp:Label ID="lblMANUFACTURER" runat="server" Text="Label"></asp:Label> </li>
+              <li><strong>차량명</strong>: <asp:Label ID="lblNAME" runat="server" Text="Label"></asp:Label> </li>
+              <li><strong>연식</strong>: <asp:Label ID="lblYEAR" runat="server" Text="Label"></asp:Label> </li>
+              <li><strong>파트넘버</strong>: <asp:Label ID="lblPARTNUM" runat="server" Text="Label"></asp:Label> </li>
+              
+              <li><strong>차대번호</strong>: <a href="#"> <asp:Label ID="lblVIN" runat="server" Text="Label"></asp:Label> </a></li>
+                <li><strong>상품정보</strong>: <asp:Label ID="lblPRODUCTINFO" runat="server" Text="Label"></asp:Label> </li>
+                <li><strong>관리번호</strong>: <asp:Label ID="lblPRODUCTID" runat="server" Text="Label"></asp:Label> </li>
+
             </ul>
           </div>
 
         </div>
-
+          
         <div class="portfolio-description">
-          <h2>상세설명 페이지는 아직 작업중입니다.</h2>
+          <h2>상세정보</h2>
           <p>
-            준비가 되면 안내하도록 하겠습니다. 감사합니다.
+              <asp:Label ID="lblMOREINFO" runat="server" Text="Label"></asp:Label>
           </p>
         </div>
+
+          
+        <div class="portfolio-description">
+          <h2>보증 및 반품 교환</h2>
+          <p>
+            <asp:Label ID="lblRETURNINFO" runat="server" Text="Label"></asp:Label> 
+          </p>
+        </div>
+
+        <div class="portfolio-description">
+          <h2>배송안내</h2>
+          <p>
+            <asp:Label ID="lblSHIPPINGINFO" runat="server" Text="Label"></asp:Label> 
+          </p>
+        </div>
+
+        <div class="portfolio-description">
+          <h2>상품QNA</h2>
+          <p>
+            - 
+          </p>
+        </div>
+
       </div>
     </section><!-- End Portfolio Details Section -->
+
+
+
+
+
 
   </main><!-- End #main -->
 
