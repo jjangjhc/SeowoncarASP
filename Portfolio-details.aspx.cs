@@ -106,9 +106,14 @@ namespace SeowoncarASP
 
 
                     StringBuilder sbTagImage = new StringBuilder();
-                    int iCount = 1;
+                    int iCount = 0;
                     foreach(FileInfo fi in fiImageArray)
                     {
+                        if (iCount == 0) {
+                            iCount++;
+                            continue; 
+                        }
+
                         sbTagImage.AppendLine(string.Format("<img src = \"board/upload/{0}/{1}/{2}_{3}.jpg\" class=\"img-fluid\" alt=\"\">",sYear,sMonth,sImageName, iCount));
                         iCount++;
                     }
@@ -125,8 +130,8 @@ namespace SeowoncarASP
 
 
                 //다른방법으로 섬네일 만들기
-                CommonClassMain ih = new CommonClassMain();
-                ih.GetThumnailImage( "062250123_1.jpg", @"D:\work\SeowoncarASP\board\upload\2021\04");
+                //CommonClassMain ih = new CommonClassMain();
+                //ih.GetThumnailImage( "062250123_1.jpg", @"D:\work\SeowoncarASP\board\upload\2021\04");
 
                 
 
