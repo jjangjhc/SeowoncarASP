@@ -13,7 +13,7 @@ namespace SeowoncarASP
 {
     public class CommonClassMain
     {
-        public void GetThumnailImage(string filename, string path)
+        public void fnGetThumnailImage(string filename, string path)
         {
             byte[] b = null;
             using (FileStream fs = File.OpenRead(path + "\\" + filename))
@@ -52,6 +52,31 @@ namespace SeowoncarASP
             }
             //return b;
         }
+
+        internal string fnNewProuductID()
+        {
+            return DateTime.Now.ToString("yyyyMMddHHmmssf");
+        }
+
+        internal string fnUploadPath(string sRequestUrl)
+        {
+
+            string sUploadPath = sRequestUrl;
+
+
+
+            if (sUploadPath.ToUpper().Contains("LOCALHOST"))
+            {
+                sUploadPath = @"D:\work\SeowoncarASP\board\upload";
+            }
+            else
+            {
+                sUploadPath = @"F:\HOME\seowoncarasp\www\board\upload";
+            }
+
+            return sUploadPath;
+        }
+
         // IMG to byte[]
         public byte[] ImageToByteArray(Image img)
         {
@@ -91,25 +116,33 @@ namespace SeowoncarASP
             return EncryptedData;
         }
 
-        public SqlDataReader fnQuerySQL(string sQuery, string sTypeDML)
+        public SqlDataReader fnQuerySQL(SqlCommand scCommand, string sTypeDML)
         {
 
             string sPassword = fnAESDecrypt128("jANcacUQjuhFgKKbaNmreyOhQSJPK5khoktXsmwrWKk=", "19851024");
 
 
             string connectingString = "server = tcp:sql19-001.cafe24.com,1433; uid = seowoncarasp; pwd = " + sPassword + "; database = seowoncarasp;";
-            SqlConnection scon = new SqlConnection(connectingString);
-            SqlCommand scom = new SqlCommand();
-            scom.Connection = scon;
-            scom.CommandText = sQuery;
-            scom.CommandTimeout = 8;
-            scon.Open();
+            SqlConnection scConn = new SqlConnection(connectingString);
+            SqlCommand scCmd = scCommand;
+            scCmd.Connection = scConn;
+
+            if (sTypeDML.ToString().Equals("SELECT")) {
+                scConn.Open();
+                SqlDataReader reader = scCmd.ExecuteReader();
+                return reader;
+            }
+            else
+            {
+                scConn.Open();
+                scCmd.ExecuteNonQuery();
+                scConn.Close();
+                return null;
+            }
+            
 
             
-            SqlDataReader reader = scom.ExecuteReader();
-
             
-            return reader;
         }
 
 
@@ -138,7 +171,56 @@ namespace SeowoncarASP
             return DecryptedData;
         }
 
+        internal string fnGetImgFullPath(string sPath, string sPRODUCTID, int iReturnImg)
+        {
+
+            string sYear = sPRODUCTID.Substring(0, 4);
+            string sMonth = sPRODUCTID.Substring(4, 2);
+            string sImageName = sPRODUCTID.Substring(6);
+
+            sPath = Path.Combine(sPath, sYear, sMonth);
 
 
+            DirectoryInfo diPathImage = new DirectoryInfo(sPath);
+            string sCondition = string.Format("{0}_*.*", sImageName);
+            FileInfo[] fiImageArray = diPathImage.GetFiles(sCondition, SearchOption.TopDirectoryOnly);
+
+            try
+            {
+                //썸네일이 없을경우 생성
+                if (!fiImageArray[0].Name.Substring(fiImageArray[0].Name.LastIndexOf("_") + 1, 1).Equals("0"))
+                {
+                    fnGetThumnailImage(fiImageArray[0].Name, sPath);
+                    fiImageArray = diPathImage.GetFiles(sCondition, SearchOption.TopDirectoryOnly);
+                }
+            }
+            catch
+            {
+
+            }
+
+            string sImgFullPath = string.Empty;
+            if (fiImageArray.Length < 1)
+            {
+                //이미지 기본값 출력
+                //sImgFullPath = "/board/upload/" + sYear + "/" + sMonth + "/062250123_0.jpg";
+                sImgFullPath = "/images/no_img.png";
+            }
+            else
+            {
+                //원하는 값 출력
+                try
+                {
+                    sImgFullPath = "/board/upload/" + sYear + "/" + sMonth + "/" + fiImageArray[iReturnImg].Name;
+                }
+                catch
+                {
+                    //해당 위치에 값이 없어도 이미지 기본값 출력
+                    //sImgFullPath = "/board/upload/" + sYear + "/" + sMonth + "/062250123_0.jpg";
+                    sImgFullPath = "/images/no_img.png";
+                }
+            }
+            return sImgFullPath;
+        }
     }
 }

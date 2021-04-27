@@ -13,6 +13,7 @@ namespace SeowoncarASP
 {
     public partial class Portfolio : Page
     {
+        CommonClassMain CCM = new CommonClassMain();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -33,14 +34,16 @@ namespace SeowoncarASP
 
         private void fnGenerateCategory()
         {
-            CommonClassMain ccm = new CommonClassMain();
+            
 
 
 
             StringBuilder sbQuery = new StringBuilder();
             sbQuery.AppendLine("SELECT DISTINCT [MANUFACTURER] ");
             sbQuery.AppendLine(" FROM [seowoncarasp].[SEOWON_PRODUCT] ");
-            SqlDataReader reader = ccm.fnQuerySQL(sbQuery.ToString(), "SELECT");
+
+            SqlCommand scCmd = new SqlCommand(sbQuery.ToString());
+            SqlDataReader reader = CCM.fnQuerySQL(scCmd, "SELECT");
 
 
             StringBuilder sbQuery2 = new StringBuilder();
@@ -59,7 +62,10 @@ namespace SeowoncarASP
             sbQuery2.AppendLine("       ,[LASTMODIFIER] ");
             sbQuery2.AppendLine("       ,[LASTMODIFIEDTIME] ");
             sbQuery2.AppendLine("   FROM [seowoncarasp].[SEOWON_PRODUCT] ");
-            SqlDataReader reader2 = ccm.fnQuerySQL(sbQuery2.ToString(), "SELECT");
+
+
+            SqlCommand scCmd2 = new SqlCommand(sbQuery2.ToString());
+            SqlDataReader reader2 = CCM.fnQuerySQL(scCmd2, "SELECT");
 
 
             XmlDocument xDoc = new XmlDocument();
@@ -130,6 +136,7 @@ namespace SeowoncarASP
                     {
                         string sMANUFACTURER = reader2["MANUFACTURER"].ToString();
                         string sPRODUCTID = reader2["PRODUCTID"].ToString();
+                        string sNAME = reader2["NAME"].ToString();
 
                         XmlElement xlDIV = xDoc.CreateElement("div");
                         XmlAttribute attClass = xDoc.CreateAttribute("class");
@@ -148,39 +155,11 @@ namespace SeowoncarASP
                             {
                                 //이미지 넣기
                                 //s_productid = "202104062250123";
-                                string sPath = Request.Url.ToString();
-                                if (sPath.ToUpper().Contains("LOCALHOST"))
-                                {
-                                    sPath = @"D:\work\SeowoncarASP\board\upload";
-                                }
-                                else
-                                {
-                                    sPath = @"F:\HOME\seowoncarasp\www\board\upload";
-                                }
-                                
-                                
-                                
-                                string sYear = sPRODUCTID.Substring(0, 4);
-                                string sMonth = sPRODUCTID.Substring(4, 2);
-                                string sImageName = sPRODUCTID.Substring(6);
 
-                                sPath = sPath + "\\" + sYear + "\\" + sMonth;
+                                string sPath = CCM.fnUploadPath(Request.Url.ToString());
 
+                                string sImgFullPath = CCM.fnGetImgFullPath(sPath, sPRODUCTID, 0);
 
-                                DirectoryInfo diPathImage = new DirectoryInfo(sPath);
-                                string sCondition = string.Format("{0}_*.*", sImageName);
-                                FileInfo[] fiImageArray = diPathImage.GetFiles(sCondition, SearchOption.TopDirectoryOnly);
-
-                                string sImgFullPath = string.Empty;
-                                if (fiImageArray.Length < 1)
-                                {
-                                    sImgFullPath =  "board/upload/"+ sYear + "/"+ sMonth + "/062250123_0.jpg";
-                                }
-                                else
-                                {
-                                    sImgFullPath = "board/upload/" + sYear + "/" + sMonth + "/" + fiImageArray[0].Name;
-                                }
-                                
 
 
 
@@ -222,7 +201,7 @@ namespace SeowoncarASP
                                         xlA.Attributes.Append(attdata_gall);
                                         xlA.Attributes.Append(attclass7);
                                         xlA.Attributes.Append(atttitle);
-                                        xlA.InnerText = sMANUFACTURER;
+                                        xlA.InnerText = sMANUFACTURER + "-" + sNAME;
 
                                         xlH3.AppendChild(xlA);
 

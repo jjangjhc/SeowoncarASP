@@ -60,7 +60,9 @@ namespace SeowoncarASP
                     sbQuery.AppendLine("      ,[LASTMODIFIEDTIME] ");
                     sbQuery.AppendLine(" FROM [seowoncarasp].[SEOWON_PRODUCT] ");
                     sbQuery.AppendLine("WHERE [PRODUCTID] = '"+ s_productid + "' ");
-                    SqlDataReader reader = ccm.fnQuerySQL(sbQuery.ToString(), "SELECT");
+
+                    SqlCommand scCmd = new SqlCommand(sbQuery.ToString());
+                    SqlDataReader reader = ccm.fnQuerySQL(scCmd, "SELECT");
 
 
                     while (reader.Read())
@@ -84,20 +86,13 @@ namespace SeowoncarASP
 
                     //이미지 넣기
                     //s_productid = "202104062250123";
-                    string sPath = Request.Url.ToString();
-                    if (sPath.ToUpper().Contains("LOCALHOST"))
-                    {
-                        sPath = @"D:\work\SeowoncarASP\board\upload";
-                    }
-                    else
-                    {
-                        sPath = @"F:\HOME\seowoncarasp\www\board\upload";
-                    }
+                    string sPath = ccm.fnUploadPath( Request.Url.ToString());
+                    
                     string sYear = s_productid.Substring(0, 4);
                     string sMonth = s_productid.Substring(4, 2);
                     string sImageName = s_productid.Substring(6);
 
-                    sPath = sPath + "\\" + sYear + "\\" + sMonth;
+                    sPath = Path.Combine(sPath, sYear, sMonth);
 
 
                     DirectoryInfo diPathImage = new DirectoryInfo(sPath);

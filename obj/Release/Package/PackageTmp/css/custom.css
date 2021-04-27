@@ -138,3 +138,47 @@ h1, h2, h3, h4, h5, h6, .font-primary {
     list-style: none;
     text-align: center;
 }
+
+.contact .php-email-form .validate {
+    display : block;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.team .member .member-info span {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 0px;
+    color: #68A4C4;
+}
+
+.button-list {
+    background: #68A4C4;
+    border: 0px;
+    padding: 0px 0px;
+    color: #fff;
+    transition: 0.4s;
+    width: 100px
+}
+
+    .button-list:hover {
+        background: #8dbad2;
+        border: 0;
+        padding: 0px 0px;
+        color: #000;
+        transition: 0.4s;
+    }
+
+.image-width100 {
+    width: 270px;
+    height: 270px !important;
+    object-fit : cover;
+}
+
+.member-info{
+    text-align:center;
+}

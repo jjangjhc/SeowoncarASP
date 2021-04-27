@@ -105,29 +105,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\logout.aspx" />
+    <Content Include="Admin\login.aspx" />
+    <Content Include="Admin\SignUp.aspx" />
     <Content Include="assets\img\portfolio\portfolio-10.jpg" />
     <Content Include="assets\img\portfolio\portfolio-11.jpg" />
     <Content Include="assets\img\portfolio\portfolio-12.jpg" />
     <Content Include="assets\img\service-details-5.jpg" />
     <Content Include="assets\img\service-details-6.jpg" />
-    <Content Include="board\admin_write.aspx" />
+    <Content Include="board\product_list.aspx" />
+    <Content Include="board\product_delete.aspx" />
+    <Content Include="board\product_update.aspx" />
+    <Content Include="board\product_insert.aspx" />
     <Content Include="board\css\main.css" />
+    <Content Include="board\js\action.js" />
     <Content Include="board\js\global.js" />
-    <Content Include="board\upload\2021\04\062250123_0.jpg" />
-    <Content Include="board\upload\2021\04\062250123_1.jpg" />
-    <Content Include="board\upload\2021\04\062250123_2.jpg" />
-    <Content Include="board\upload\2021\04\062250123_3.jpg" />
-    <Content Include="board\upload\2021\04\062250222_0.jpg" />
-    <Content Include="board\upload\2021\04\062250222_1.jpg" />
-    <Content Include="board\upload\2021\04\062250222_2.jpg" />
-    <Content Include="board\upload\2021\04\062259333_0.jpg" />
-    <Content Include="board\upload\2021\04\062259333_1.jpg" />
-    <Content Include="board\upload\2021\04\062259333_2.jpg" />
-    <Content Include="board\upload\2021\04\062259333_3.jpg" />
-    <Content Include="board\upload\2021\04\062259333_4.jpg" />
     <Content Include="board\vendor\jquery\jquery.js" />
     <Content Include="board\vendor\jquery\jquery.min.js" />
     <Content Include="favicon.png" />
+    <Content Include="images\no_img.png" />
     <Content Include="Portfolio.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="About.aspx" />
@@ -329,12 +325,54 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="board\admin_write.aspx.cs">
-      <DependentUpon>admin_write.aspx</DependentUpon>
+    <Compile Include="Admin\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="board\admin_write.aspx.designer.cs">
-      <DependentUpon>admin_write.aspx</DependentUpon>
+    <Compile Include="Admin\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board\product_list.aspx.cs">
+      <DependentUpon>product_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\product_list.aspx.designer.cs">
+      <DependentUpon>product_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board\product_delete.aspx.cs">
+      <DependentUpon>product_delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\product_delete.aspx.designer.cs">
+      <DependentUpon>product_delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board\product_update.aspx.cs">
+      <DependentUpon>product_update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\product_update.aspx.designer.cs">
+      <DependentUpon>product_update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board\product_insert.aspx.cs">
+      <DependentUpon>product_insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\product_insert.aspx.designer.cs">
+      <DependentUpon>product_insert.aspx</DependentUpon>
     </Compile>
     <Compile Include="CommonClassMain.cs" />
     <Compile Include="Portfolio.aspx.cs">
@@ -432,6 +470,7 @@
     <Folder Include="assets\vendor\php-email-form\_notes\" />
     <Folder Include="assets\vendor\venobox\_notes\" />
     <Folder Include="assets\vendor\waypoints\_notes\" />
+    <Folder Include="board\upload\" />
     <Folder Include="css\_notes\" />
     <Folder Include="fonts\ttf\_notes\" />
     <Folder Include="fonts\_notes\" />

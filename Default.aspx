@@ -14,7 +14,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown"><span>서원폐차장</span></h2>
           <p class="animate__animated animate__fadeInUp">20년 전통과 믿음 폐차의 모든것을 책임지겠습니다.</p>
-          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+          <a href="/about" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
         </div>
       </div>
 
@@ -24,7 +24,7 @@
           <h2 class="animate__animated animate__fadeInDown">폐차 안내</h2>
           <p class="animate__animated animate__fadeInUp">조기/중기/압류자동차 폐차의 구비서류, 과태료등의 안내사항을 소개합니다<br><br>
 			  “폐차”란 자동차를 해체하여 자동차의 장치를 그 성능을 유지할 수 없도록 압축·파쇄(破碎) 또는 절단하거나 자동차를 해체하지 않고 바로 압축·파쇄하는 것을 말합니다(「자동차관리법」 제2조제5호 및 규제「자동차관리법 시행규칙」 제138조제1항). </p>
-          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+          <a href="/services" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
         </div>
       </div>
 
@@ -33,7 +33,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">자동차 부품 안내</h2>
           <p class="animate__animated animate__fadeInUp">조향장치, 연료공급장치, 엔진, 변속장치, 서스펜션, 모터, 인버터, 배터리<br><br>다양한 부품을 만나실 수 있습니다.</p>
-          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+          <a href="/portfolio" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
         </div>
       </div>
 
@@ -95,6 +95,7 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Why Us Section ======= -->
+    <!--
     <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200"  style="display:none">
       <div class="container">
 
@@ -122,9 +123,12 @@
         </div>
 
       </div>
-    </section><!-- End Why Us Section -->
+    </section>
+    -->
+        <!-- End Why Us Section -->
 
     <!-- ======= Features Section ======= -->
+      <!--
     <section class="features"  style="display:none">
       <div class="container">
 
@@ -202,7 +206,9 @@
         </div>
 
       </div>
-    </section><!-- End Features Section -->
+    </section>
+      -->
+          <!-- End Features Section -->
 
   </main><!-- End #main -->
 
