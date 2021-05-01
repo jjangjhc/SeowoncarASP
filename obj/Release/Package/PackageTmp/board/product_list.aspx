@@ -37,8 +37,6 @@
         </section>
         <input id="productid" name="productid" type="hidden" value="" />
         <input id="dmltype" name="dmltype" type="hidden" value="" />
-        
-
     </main>
     <script src="js/action.js"></script>
 </asp:Content>

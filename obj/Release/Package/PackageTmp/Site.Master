@@ -111,6 +111,7 @@
                 listPath.Add("ABOUT");
                 listPath.Add("SERVICES");
                 listPath.Add("PORTFOLIO");
+                listPath.Add("BOARD");
                 listPath.Add("CONTACT");
                 listPath.Add("PRODUCT_INSERT");
                 listPath.Add("PRODUCT_LIST");
@@ -134,7 +135,8 @@
             <li <%=sActive[1] %>><a href="/about.aspx">서원폐차장</a></li>
             <li <%=sActive[2] %>><a href="/services.aspx">폐차안내</a></li>
             <li <%=sActive[3] %>><a href="/portfolio.aspx">부품 둘러보기</a></li>
-            <li <%=sActive[4] %>><a href="/contact.aspx">고객센터</a></li>
+            <li <%=sActive[4] %>><a href="/board/board_list.aspx">문의 게시판</a></li>
+            <li <%=sActive[5] %>><a href="/contact.aspx">고객센터</a></li>
             <% 
                 if (Session["id"] != null)
                 {
@@ -142,19 +144,19 @@
                     if (iPower > 10)
                     {
             %>
-            <li <%=sActive[5] %>><a href="/board/product_insert">상품등록</a></li>
-            <li <%=sActive[6] %>><a href="/board/product_list">상품관리</a></li>
+            <li <%=sActive[6] %>><a href="/board/product_insert">상품등록</a></li>
+            <li <%=sActive[7] %>><a href="/board/product_list">상품관리</a></li>
             <%
                     }
             %>
 
-            <li <%=sActive[7] %>><a href="/admin/logout">로그아웃</a></li>
+            <li <%=sActive[8] %>><a href="/admin/logout">로그아웃</a></li>
             <%
                 }
                 else
                 {
             %>
-            <li <%=sActive[7] %>><a href="/admin/login">로그인</a></li>
+            <li <%=sActive[8] %>><a href="/admin/login">로그인</a></li>
             <%
                 }
             %>

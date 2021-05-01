@@ -8,7 +8,7 @@
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4Od7UHXA+kattkSfj+oYIQAAAAACAAAAAAAQZgAAAAEAACAAAACMaNJ9jvjgB6xWMjstRh0J3YNuqDLOCL8E1QXigjbm6QAAAAAOgAAAAAIAACAAAAD+U751H/1JB1xUyMvNJumHbXjsJSbpraHimzvASnKyASAAAAAylhd7KVNqJnvob1cbQFTgMQXcPQhyWzbs+oNycCKPkUAAAADCKoyii4QMhxV/VIp6gb95EkCEQryo478A2cv+hVzGF6t2Tc5iV5tBpOmFIZBFjg4oKZ2hqoVdchfLhKhhUhhW</EncryptedPassword>
     <_PublishTargetUrl>ftp://seowoncarasp.cafe24.com:5634/www</_PublishTargetUrl>
-    <History>True|2021-04-27T16:26:17.6643353Z;True|2021-04-28T01:24:48.5606423+09:00;True|2021-04-28T01:20:06.7545256+09:00;True|2021-04-28T01:18:49.2953268+09:00;True|2021-04-28T01:11:02.4868914+09:00;True|2021-04-28T01:08:46.3646066+09:00;True|2021-04-28T00:53:13.8787991+09:00;False|2021-04-28T00:41:27.9557210+09:00;False|2021-04-28T00:40:43.2710091+09:00;False|2021-04-28T00:40:14.7205503+09:00;True|2021-04-27T15:08:56.8081817+09:00;True|2021-04-27T03:38:21.1900302+09:00;True|2021-04-27T03:37:02.7479472+09:00;True|2021-04-27T03:35:06.8528518+09:00;True|2021-04-27T03:29:03.6354416+09:00;True|2021-04-21T02:11:10.3362573+09:00;True|2021-04-21T02:07:31.2848095+09:00;True|2021-04-14T01:05:24.7146865+09:00;True|2021-04-14T01:02:23.9498099+09:00;True|2021-04-14T01:00:55.2870193+09:00;True|2021-04-06T01:34:55.3074633+09:00;True|2021-04-05T23:18:57.8857827+09:00;True|2021-04-05T23:07:29.8005624+09:00;True|2021-04-05T23:06:36.4621085+09:00;True|2021-04-02T02:10:09.9202888+09:00;True|2021-04-02T00:56:37.5377093+09:00;True|2021-03-31T01:50:12.7847858+09:00;True|2021-03-31T01:32:17.1476478+09:00;False|2021-03-31T01:28:25.8131665+09:00;False|2021-03-31T01:26:47.1188462+09:00;False|2021-03-31T01:25:06.4846753+09:00;False|2021-03-31T01:21:17.5796868+09:00;False|2021-03-31T01:17:49.5704980+09:00;False|2021-03-31T01:05:12.1213396+09:00;False|2021-03-31T01:02:21.2818420+09:00;</History>
+    <History>True|2021-05-01T16:35:37.6155579Z;True|2021-04-28T01:26:17.6643353+09:00;True|2021-04-28T01:24:48.5606423+09:00;True|2021-04-28T01:20:06.7545256+09:00;True|2021-04-28T01:18:49.2953268+09:00;True|2021-04-28T01:11:02.4868914+09:00;True|2021-04-28T01:08:46.3646066+09:00;True|2021-04-28T00:53:13.8787991+09:00;False|2021-04-28T00:41:27.9557210+09:00;False|2021-04-28T00:40:43.2710091+09:00;False|2021-04-28T00:40:14.7205503+09:00;True|2021-04-27T15:08:56.8081817+09:00;True|2021-04-27T03:38:21.1900302+09:00;True|2021-04-27T03:37:02.7479472+09:00;True|2021-04-27T03:35:06.8528518+09:00;True|2021-04-27T03:29:03.6354416+09:00;True|2021-04-21T02:11:10.3362573+09:00;True|2021-04-21T02:07:31.2848095+09:00;True|2021-04-14T01:05:24.7146865+09:00;True|2021-04-14T01:02:23.9498099+09:00;True|2021-04-14T01:00:55.2870193+09:00;True|2021-04-06T01:34:55.3074633+09:00;True|2021-04-05T23:18:57.8857827+09:00;True|2021-04-05T23:07:29.8005624+09:00;True|2021-04-05T23:06:36.4621085+09:00;True|2021-04-02T02:10:09.9202888+09:00;True|2021-04-02T00:56:37.5377093+09:00;True|2021-03-31T01:50:12.7847858+09:00;True|2021-03-31T01:32:17.1476478+09:00;False|2021-03-31T01:28:25.8131665+09:00;False|2021-03-31T01:26:47.1188462+09:00;False|2021-03-31T01:25:06.4846753+09:00;False|2021-03-31T01:21:17.5796868+09:00;False|2021-03-31T01:17:49.5704980+09:00;False|2021-03-31T01:05:12.1213396+09:00;False|2021-03-31T01:02:21.2818420+09:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="About.aspx">
@@ -579,10 +579,10 @@
       <publishTime>08/08/2018 12:18:16</publishTime>
     </File>
     <File Include="bin/SeowoncarASP.dll">
-      <publishTime>04/28/2021 01:26:07</publishTime>
+      <publishTime>05/02/2021 01:35:25</publishTime>
     </File>
     <File Include="bin/SeowoncarASP.pdb">
-      <publishTime>04/28/2021 01:26:07</publishTime>
+      <publishTime>05/02/2021 01:35:25</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
       <publishTime>02/11/2014 15:26:04</publishTime>
@@ -599,11 +599,20 @@
     <File Include="board/admin_write.aspx">
       <publishTime>04/27/2021 15:07:28</publishTime>
     </File>
+    <File Include="board/board_insert.aspx">
+      <publishTime>05/01/2021 19:49:30</publishTime>
+    </File>
+    <File Include="board/board_list.aspx">
+      <publishTime>05/02/2021 01:28:49</publishTime>
+    </File>
     <File Include="board/css/main.css">
       <publishTime>04/27/2021 14:41:46</publishTime>
     </File>
+    <File Include="board/css/table.css">
+      <publishTime>05/02/2021 01:17:47</publishTime>
+    </File>
     <File Include="board/js/action.js">
-      <publishTime>04/28/2021 00:48:17</publishTime>
+      <publishTime>05/02/2021 00:53:05</publishTime>
     </File>
     <File Include="board/js/global.js">
       <publishTime>09/13/2018 11:33:02</publishTime>
@@ -615,7 +624,7 @@
       <publishTime>04/28/2021 00:44:28</publishTime>
     </File>
     <File Include="board/product_list.aspx">
-      <publishTime>04/27/2021 23:25:13</publishTime>
+      <publishTime>05/01/2021 20:03:07</publishTime>
     </File>
     <File Include="board/product_update.aspx">
       <publishTime>04/27/2021 23:19:47</publishTime>
@@ -705,7 +714,7 @@
       <publishTime>04/28/2021 01:19:51</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>04/28/2021 01:26:03</publishTime>
+      <publishTime>05/01/2021 17:27:00</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>12/24/2016 12:23:22</publishTime>
@@ -891,7 +900,7 @@
       <publishTime>03/29/2021 23:18:09</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>04/28/2021 01:24:31</publishTime>
+      <publishTime>05/02/2021 01:06:41</publishTime>
     </File>
     <File Include="Site.Mobile.Master">
       <publishTime>03/29/2021 23:57:34</publishTime>

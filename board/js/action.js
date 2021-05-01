@@ -25,16 +25,20 @@ function fnDeleteProductid(sProductid) {
     $("#productid").val(sProductid);
     $("#dmltype").val("delete");
 
-    let retVal = confirm("삭제 하시겠습니까?\n\n상품번호 : " + sProductid );
+    let retVal = confirm("삭제 하시겠습니까?\n\n상품번호 : " + sProductid);
     if (retVal == true) {
         document.forms[0].submit();
     } else {
         return;
     }
 
+}
 
+function fnBoardInsert(sProductid) {
+
+    $("#hfBOARD_ID").val(sProductid);
     
-
+    document.forms[0].submit();
 
 }
 

@@ -161,20 +161,27 @@ namespace SeowoncarASP
                                 string sImgFullPath = CCM.fnGetImgFullPath(sPath, sPRODUCTID, 0);
 
 
+                                XmlElement xeAImg = xDoc.CreateElement("a");
+                                XmlAttribute xaAImg = xDoc.CreateAttribute("href");
+                                xaAImg.Value = "/portfolio-details.aspx?productid=" + sPRODUCTID;
+                                xeAImg.Attributes.Append(xaAImg);
+                                xlDIV2.AppendChild(xeAImg);
 
+                                {
+                                    XmlElement xlimg = xDoc.CreateElement("img");
+                                    XmlAttribute attsrc = xDoc.CreateAttribute("src");
+                                    attsrc.Value = sImgFullPath;
+                                    XmlAttribute attClass4 = xDoc.CreateAttribute("class");
+                                    attClass4.Value = "img-fluid";
+                                    XmlAttribute attalt = xDoc.CreateAttribute("alt");
+                                    attalt.Value = "-";
 
-                                XmlElement xlimg = xDoc.CreateElement("img");
-                                XmlAttribute attsrc = xDoc.CreateAttribute("src");
-                                attsrc.Value = sImgFullPath;
-                                XmlAttribute attClass4 = xDoc.CreateAttribute("class");
-                                attClass4.Value = "img-fluid";
-                                XmlAttribute attalt = xDoc.CreateAttribute("alt");
-                                attalt.Value = "-";
+                                    xlimg.Attributes.Append(attsrc);
+                                    xlimg.Attributes.Append(attClass4);
+                                    xlimg.Attributes.Append(attalt);
+                                    xeAImg.AppendChild(xlimg);
+                                }
 
-                                xlimg.Attributes.Append(attsrc);
-                                xlimg.Attributes.Append(attClass4);
-                                xlimg.Attributes.Append(attalt);
-                                xlDIV2.AppendChild(xlimg);
 
                                 XmlElement xlDIV3 = xDoc.CreateElement("div");
                                 XmlAttribute attClass6 = xDoc.CreateAttribute("class");
@@ -189,7 +196,8 @@ namespace SeowoncarASP
                                     {
                                         XmlElement xlA = xDoc.CreateElement("a");
                                         XmlAttribute attHref = xDoc.CreateAttribute("href");
-                                        attHref.Value = sImgFullPath;
+                                        //attHref.Value = sImgFullPath;
+                                        attHref.Value = "/portfolio-details.aspx?productid=" + sPRODUCTID;
                                         XmlAttribute attdata_gall = xDoc.CreateAttribute("data-gall");
                                         attdata_gall.Value = "portfolioGallery";
                                         XmlAttribute attclass7 = xDoc.CreateAttribute("class");
@@ -198,8 +206,8 @@ namespace SeowoncarASP
                                         atttitle.Value = sMANUFACTURER;
 
                                         xlA.Attributes.Append(attHref);
-                                        xlA.Attributes.Append(attdata_gall);
-                                        xlA.Attributes.Append(attclass7);
+                                        //xlA.Attributes.Append(attdata_gall);
+                                        //xlA.Attributes.Append(attclass7);
                                         xlA.Attributes.Append(atttitle);
                                         xlA.InnerText = sMANUFACTURER + "-" + sNAME;
 
@@ -207,60 +215,60 @@ namespace SeowoncarASP
 
                                     }
 
-                                    XmlElement xlDIV4 = xDoc.CreateElement("div");
-                                    xlDIV3.AppendChild(xlDIV4);
-
-                                  
-                                    {
-                                        XmlElement xlA2 = xDoc.CreateElement("a");
-                                        XmlAttribute attHref2 = xDoc.CreateAttribute("href");
-                                        attHref2.Value = sImgFullPath;
-                                        XmlAttribute attdata_gall2 = xDoc.CreateAttribute("data-gall");
-                                        attdata_gall2.Value = "portfolioGallery";
-                                        XmlAttribute attclass72 = xDoc.CreateAttribute("class");
-                                        attclass72.Value = "venobox";
-                                        XmlAttribute atttitle2 = xDoc.CreateAttribute("title");
-                                        atttitle2.Value = sMANUFACTURER;
-
-                                        xlA2.Attributes.Append(attHref2);
-                                        xlA2.Attributes.Append(attdata_gall2);
-                                        xlA2.Attributes.Append(attclass72);
-                                        xlA2.Attributes.Append(atttitle2);
-                                        
-                                        xlDIV4.AppendChild(xlA2);
-
-                                        {
-                                            XmlElement xlI = xDoc.CreateElement("i");
-                                            XmlAttribute attClass8 = xDoc.CreateAttribute("class");
-                                            attClass8.Value = "bx bx-plus";
-                                            xlI.Attributes.Append(attClass8);
-                                            xlI.InnerText = " ";
-
-                                            xlA2.AppendChild(xlI);
-                                        }
-
-                                        XmlElement xlA23 = xDoc.CreateElement("a");
-                                        XmlAttribute attHref23 = xDoc.CreateAttribute("href");
-                                        attHref23.Value = "portfolio-details.aspx?productid=" + sPRODUCTID;
-                                        XmlAttribute atttitle23 = xDoc.CreateAttribute("title");
-                                        atttitle23.Value = "Portfolio Details";
-
-                                        xlA23.Attributes.Append(attHref23);
-                                        xlA23.Attributes.Append(atttitle23);
-
-                                        xlDIV4.AppendChild(xlA23);
-
-                                        {
-                                            XmlElement xlI = xDoc.CreateElement("i");
-                                            xlI.InnerText = " ";
-                                            XmlAttribute attClass8 = xDoc.CreateAttribute("class");
-                                            attClass8.Value = "bx bx-link";
-                                            xlI.Attributes.Append(attClass8);
-
-                                            xlA23.AppendChild(xlI);
-                                        }
-
-                                    }
+                                    //XmlElement xlDIV4 = xDoc.CreateElement("div");
+                                    //xlDIV3.AppendChild(xlDIV4);
+                                    //
+                                    //
+                                    //{
+                                    //    XmlElement xlA2 = xDoc.CreateElement("a");
+                                    //    XmlAttribute attHref2 = xDoc.CreateAttribute("href");
+                                    //    attHref2.Value = sImgFullPath;
+                                    //    XmlAttribute attdata_gall2 = xDoc.CreateAttribute("data-gall");
+                                    //    attdata_gall2.Value = "portfolioGallery";
+                                    //    XmlAttribute attclass72 = xDoc.CreateAttribute("class");
+                                    //    attclass72.Value = "venobox";
+                                    //    XmlAttribute atttitle2 = xDoc.CreateAttribute("title");
+                                    //    atttitle2.Value = sMANUFACTURER;
+                                    //
+                                    //    xlA2.Attributes.Append(attHref2);
+                                    //    xlA2.Attributes.Append(attdata_gall2);
+                                    //    xlA2.Attributes.Append(attclass72);
+                                    //    xlA2.Attributes.Append(atttitle2);
+                                    //    
+                                    //    xlDIV4.AppendChild(xlA2);
+                                    //
+                                    //    {
+                                    //        XmlElement xlI = xDoc.CreateElement("i");
+                                    //        XmlAttribute attClass8 = xDoc.CreateAttribute("class");
+                                    //        attClass8.Value = "bx bx-plus";
+                                    //        xlI.Attributes.Append(attClass8);
+                                    //        xlI.InnerText = " ";
+                                    //
+                                    //        xlA2.AppendChild(xlI);
+                                    //    }
+                                    //
+                                    //    XmlElement xlA23 = xDoc.CreateElement("a");
+                                    //    XmlAttribute attHref23 = xDoc.CreateAttribute("href");
+                                    //    attHref23.Value = "portfolio-details.aspx?productid=" + sPRODUCTID;
+                                    //    XmlAttribute atttitle23 = xDoc.CreateAttribute("title");
+                                    //    atttitle23.Value = "Portfolio Details";
+                                    //
+                                    //    xlA23.Attributes.Append(attHref23);
+                                    //    xlA23.Attributes.Append(atttitle23);
+                                    //
+                                    //    xlDIV4.AppendChild(xlA23);
+                                    //
+                                    //    {
+                                    //        XmlElement xlI = xDoc.CreateElement("i");
+                                    //        xlI.InnerText = " ";
+                                    //        XmlAttribute attClass8 = xDoc.CreateAttribute("class");
+                                    //        attClass8.Value = "bx bx-link";
+                                    //        xlI.Attributes.Append(attClass8);
+                                    //
+                                    //        xlA23.AppendChild(xlI);
+                                    //    }
+                                    //
+                                    //}
                                 }
                             }
                         }

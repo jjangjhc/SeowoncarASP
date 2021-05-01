@@ -113,6 +113,9 @@
     <Content Include="assets\img\portfolio\portfolio-12.jpg" />
     <Content Include="assets\img\service-details-5.jpg" />
     <Content Include="assets\img\service-details-6.jpg" />
+    <Content Include="board\board_insert.aspx" />
+    <Content Include="board\board_list.aspx" />
+    <Content Include="board\css\table.css" />
     <Content Include="board\product_list.aspx" />
     <Content Include="board\product_delete.aspx" />
     <Content Include="board\product_update.aspx" />
@@ -345,6 +348,20 @@
     </Compile>
     <Compile Include="Admin\SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board\board_insert.aspx.cs">
+      <DependentUpon>board_insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\board_insert.aspx.designer.cs">
+      <DependentUpon>board_insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board\board_list.aspx.cs">
+      <DependentUpon>board_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\board_list.aspx.designer.cs">
+      <DependentUpon>board_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="board\product_list.aspx.cs">
       <DependentUpon>product_list.aspx</DependentUpon>
