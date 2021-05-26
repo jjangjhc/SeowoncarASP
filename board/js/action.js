@@ -34,11 +34,36 @@ function fnDeleteProductid(sProductid) {
 
 }
 
-function fnBoardInsert(sProductid) {
+function fnBoardOpen(sProductid) {
+    $("#hftempid").val(sProductid);
+    //아이디 받고 모달창 열기
+    fnModalOpen();
 
-    $("#hfBOARD_ID").val(sProductid);
     
-    document.forms[0].submit();
 
 }
 
+function fnModalOpen() {
+    document.querySelector('.modal_wrap').style.display = 'block';
+    document.querySelector('.black_bg').style.display = 'block';
+}
+function fnModalClose() {
+    document.querySelector('.modal_wrap').style.display = 'none';
+    document.querySelector('.black_bg').style.display = 'none';
+    $("#txtPASSWORD_CHECK").val('');
+    $("#lblCheckPassword").hide();
+
+}
+
+
+
+function fnPasswordCheck() {
+
+    sID = $("#hftempid").val();
+    sPASSWORD = $("#txtPASSWORD_CHECK").val();
+    
+    window.open("board_list_check?id=" + sID + "&password=" + sPASSWORD, "ifrCheck");
+
+    
+
+}

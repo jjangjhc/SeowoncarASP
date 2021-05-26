@@ -29,11 +29,13 @@
                         <div role="form" class="php-email-form">
                             <asp:Label ID="lblREF" runat="server" Text="" Visible="false"></asp:Label>
                             <div class="form-group">
-                                <asp:TextBox ID="txtID" CssClass="form-control" runat="server"  placeholder="아이디" data-rule="minlen:4" data-msg="아이디는 8글자 이상입니다." required=""></asp:TextBox>
+                                <asp:Label ID="Label1" runat="server" Text="아이디"></asp:Label>
+                                <asp:TextBox ID="txtID" CssClass="form-control" runat="server"  data-rule="minlen:4" required=""></asp:TextBox>
                                 <asp:Label ID="lblID" runat="server" Text="" CssClass="validate" Visible ="false"></asp:Label>
                             </div>
                             <div class="form-group">
-                                <asp:TextBox ID="txtPW" TextMode="Password" CssClass="form-control" runat="server"  placeholder="비밀번호" data-rule="minlen:8" data-msg="비밀번호는 8글자 이상입니다." required=""></asp:TextBox>
+                                <asp:Label ID="Label2" runat="server" Text="비밀번호"></asp:Label>
+                                <asp:TextBox ID="txtPW" TextMode="Password" CssClass="form-control" runat="server"  data-rule="minlen:8" data-msg="비밀번호는 8글자 이상입니다." required=""></asp:TextBox>
                                 <asp:Label ID="lblPW" runat="server" Text="" CssClass="validate" Visible ="false"></asp:Label>
                             </div>
                             <div class="text-center">

@@ -22,6 +22,8 @@ namespace SeowoncarASP.board
                 {
                     txtUSER_ID.Text = Session["id"].ToString();
                     txtUSER_ID.ReadOnly = true;
+                    divPASS1.Visible = false;
+                    divPASS2.Visible = false;
                 }
             }
             else
@@ -29,35 +31,42 @@ namespace SeowoncarASP.board
                 string sUSER_ID = txtUSER_ID.Text;
                 string sTITLE = txtTITLE.Text;
                 string sCONTENT_BOARD = txtCONTENT_BOARD.Text;
+                string sPASSWORD = txtPASSWORD.Text;
+                string sPASSWORD2 = txtPASSWORD2.Text;
 
 
-                    //insert
-                    StringBuilder sbQuery = new StringBuilder();
-                    sbQuery.AppendLine("INSERT INTO [seowoncarasp].[SEOWON_BOARD]  ");
-                    sbQuery.AppendLine("      ( ");
-                    sbQuery.AppendLine("       [USER_ID] ");
-                    sbQuery.AppendLine("      ,[TITLE] ");
-                    sbQuery.AppendLine("      ,[CONTENT_BOARD] ");
-                    sbQuery.AppendLine("      ) ");
-                    sbQuery.AppendLine("     VALUES ");
-                    sbQuery.AppendLine("      ( ");
-                    sbQuery.AppendLine("       @USER_ID");
-                    sbQuery.AppendLine("      ,@TITLE");
-                    sbQuery.AppendLine("      ,@CONTENT_BOARD");
-                    sbQuery.AppendLine("      ) ");
+                if (!sPASSWORD.Equals(sPASSWORD2)){
 
-                    SqlCommand cmd = new SqlCommand(sbQuery.ToString());
-                    cmd.Parameters.AddWithValue("@USER_ID", sUSER_ID);
-                    cmd.Parameters.AddWithValue("@TITLE", sTITLE);
-                    cmd.Parameters.AddWithValue("@CONTENT_BOARD", sCONTENT_BOARD);
+                    lblPASSWORD_ERROR.Text = "두 개의 비밀번호가 다릅니다. 다시 입력해주세요.";
+                    return;
+                }
 
+                //insert
+                StringBuilder sbQuery = new StringBuilder();
+                sbQuery.AppendLine("INSERT INTO [seowoncarasp].[SEOWON_BOARD]  ");
+                sbQuery.AppendLine("      ( ");
+                sbQuery.AppendLine("       [USER_ID] ");
+                sbQuery.AppendLine("      ,[TITLE] ");
+                sbQuery.AppendLine("      ,[CONTENT_BOARD] ");
+                sbQuery.AppendLine("      ,[PASSWORD] ");
+                sbQuery.AppendLine("      ) ");
+                sbQuery.AppendLine("     VALUES ");
+                sbQuery.AppendLine("      ( ");
+                sbQuery.AppendLine("       @USER_ID");
+                sbQuery.AppendLine("      ,@TITLE");
+                sbQuery.AppendLine("      ,@CONTENT_BOARD");
+                sbQuery.AppendLine("      ,@PASSWORD");
+                sbQuery.AppendLine("      ) ");
 
-                    //파일이 없으면 실패
+                SqlCommand cmd = new SqlCommand(sbQuery.ToString());
+                cmd.Parameters.AddWithValue("@USER_ID", sUSER_ID);
+                cmd.Parameters.AddWithValue("@TITLE", sTITLE);
+                cmd.Parameters.AddWithValue("@CONTENT_BOARD", sCONTENT_BOARD);
+                cmd.Parameters.AddWithValue("@PASSWORD", sPASSWORD);
 
-                    CCM.fnQuerySQL(cmd, "INSERT");
+                CCM.fnQuerySQL(cmd, "INSERT");
 
-                    Response.Redirect("/board/board_list");
-
+                Response.Redirect("/board/board_list");
 
 
 

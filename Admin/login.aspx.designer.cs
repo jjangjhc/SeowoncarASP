@@ -24,6 +24,15 @@ namespace SeowoncarASP.Admin
         protected global::System.Web.UI.WebControls.Label lblREF;
 
         /// <summary>
+        /// Label1 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+
+        /// <summary>
         /// txtID 컨트롤입니다.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace SeowoncarASP.Admin
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblID;
+
+        /// <summary>
+        /// Label2 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
         /// txtPW 컨트롤입니다.

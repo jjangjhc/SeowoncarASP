@@ -115,6 +115,7 @@
     <Content Include="assets\img\service-details-6.jpg" />
     <Content Include="board\board_insert.aspx" />
     <Content Include="board\board_list.aspx" />
+    <Content Include="board\board_list_check.aspx" />
     <Content Include="board\css\table.css" />
     <Content Include="board\product_list.aspx" />
     <Content Include="board\product_delete.aspx" />
@@ -127,6 +128,9 @@
     <Content Include="board\vendor\jquery\jquery.min.js" />
     <Content Include="favicon.png" />
     <Content Include="images\no_img.png" />
+    <Content Include="images\services01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Portfolio.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="About.aspx" />
@@ -362,6 +366,13 @@
     </Compile>
     <Compile Include="board\board_list.aspx.designer.cs">
       <DependentUpon>board_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board\board_list_check.aspx.cs">
+      <DependentUpon>board_list_check.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\board_list_check.aspx.designer.cs">
+      <DependentUpon>board_list_check.aspx</DependentUpon>
     </Compile>
     <Compile Include="board\product_list.aspx.cs">
       <DependentUpon>product_list.aspx</DependentUpon>

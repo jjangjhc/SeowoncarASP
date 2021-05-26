@@ -103,8 +103,12 @@
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
             <%
-                
+
                 string sCondition = HttpContext.Current.Request.Url.PathAndQuery.ToUpper();
+                if (sCondition.Contains("/"))
+                {
+                    sCondition = sCondition.Substring(sCondition.LastIndexOf("/"));
+                }
 
                 List<string> listPath = new List<string>();
                 listPath.Add("DEFAULT");
@@ -221,11 +225,11 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>폐차 안내</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">폐차 신청방법</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">조기 폐차</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">중기 폐차</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">압류 폐차</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">유의사항</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/services">폐차 신청방법</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/services#Menu01">조기 폐차</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/services#Menu02">중기 폐차</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/services#Menu03">압류 폐차</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/services#Menu06">유의사항</a></li>
             </ul>
           </div>
 

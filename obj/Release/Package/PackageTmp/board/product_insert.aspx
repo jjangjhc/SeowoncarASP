@@ -100,7 +100,7 @@
                             <div class="name">상세정보<br />(HTML가능)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <asp:TextBox ID="txtMOREINFO" runat="server" TextMode="MultiLine" CssClass ="input--style-6" placeholder="재사용 자동차 부품의 사용은 신품대비 저렴한 가격에 구입이 가능해서 가계에 도움이 될 뿐만 아니라 하나뿐인 지구를 살리는 길이고 후손에게 아름다운 지구 환경을 물려주는 시작점 입니다. 긍지를 가지고 구매 하시고 주변에 널리 알려 주시기 바랍니다." ></asp:TextBox>
+                                    <asp:TextBox ID="txtMOREINFO" runat="server" TextMode="MultiLine" CssClass ="textarea--style-6" placeholder="재사용 자동차 부품의 사용은 신품대비 저렴한 가격에 구입이 가능해서 가계에 도움이 될 뿐만 아니라 하나뿐인 지구를 살리는 길이고 후손에게 아름다운 지구 환경을 물려주는 시작점 입니다. 긍지를 가지고 구매 하시고 주변에 널리 알려 주시기 바랍니다." ></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                             <div class="name">보증 및 반품 교환<br />(HTML가능)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <asp:TextBox ID="txtRETURNINFO" runat="server"  TextMode="MultiLine" CssClass ="input--style-6" placeholder="보증 및 반품 교환 정보를 입력하세요"></asp:TextBox>
+                                    <asp:TextBox ID="txtRETURNINFO" runat="server"  TextMode="MultiLine" CssClass ="textarea--style-6" placeholder="보증 및 반품 교환 정보를 입력하세요"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                             <div class="name">배송안내<br />(HTML가능)</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <asp:TextBox ID="txtSHIPPINGINFO" runat="server" TextMode="MultiLine" CssClass ="input--style-6" placeholder="배송 정보를 입력하세요"></asp:TextBox>
+                                    <asp:TextBox ID="txtSHIPPINGINFO" runat="server" TextMode="MultiLine" CssClass ="textarea--style-6" placeholder="배송 정보를 입력하세요"></asp:TextBox>
                                 </div>
                             </div>
                         </div>

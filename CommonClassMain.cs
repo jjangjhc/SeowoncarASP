@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -127,7 +128,8 @@ namespace SeowoncarASP
             SqlCommand scCmd = scCommand;
             scCmd.Connection = scConn;
 
-            if (sTypeDML.ToString().Equals("SELECT")) {
+            if (sTypeDML.ToString().Equals("SELECT"))
+            {
                 scConn.Open();
                 SqlDataReader reader = scCmd.ExecuteReader();
                 return reader;
@@ -139,10 +141,47 @@ namespace SeowoncarASP
                 scConn.Close();
                 return null;
             }
-            
+
 
             
-            
+
+
+        }
+
+        public DataSet fnQuerySQL_DataSet(SqlCommand scCommand, string sTypeDML)
+        {
+
+            string sPassword = fnAESDecrypt128("jANcacUQjuhFgKKbaNmreyOhQSJPK5khoktXsmwrWKk=", "19851024");
+
+
+            string connectingString = "server = tcp:sql19-001.cafe24.com,1433; uid = seowoncarasp; pwd = " + sPassword + "; database = seowoncarasp;";
+            SqlConnection scConn = new SqlConnection(connectingString);
+            SqlCommand scCmd = scCommand;
+            scCmd.Connection = scConn;
+
+            if (sTypeDML.ToUpper().ToString().Equals("SELECT"))
+            {
+                DataSet ds = new DataSet();
+                // SqlDataAdapter 초기화
+                SqlDataAdapter sda = new SqlDataAdapter(scCmd);
+
+                // Fill 메서드 실행하여 결과 DataSet을 리턴받음
+                sda.Fill(ds);
+
+                scConn.Close();
+
+                return ds;
+            }
+            else
+            {
+                scConn.Open();
+                scCmd.ExecuteNonQuery();
+                scConn.Close();
+                return null;
+            }
+
+
+
         }
 
 

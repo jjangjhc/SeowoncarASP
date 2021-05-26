@@ -74,3 +74,4 @@ D:\work\SeowoncarASP\obj\Release\SeowoncarASP.csproj.CoreCompileInputs.cache
 D:\work\SeowoncarASP\obj\Release\SeowoncarASP.csproj.CopyComplete
 D:\work\SeowoncarASP\obj\Release\SeowoncarASP.dll
 D:\work\SeowoncarASP\obj\Release\SeowoncarASP.pdb
+D:\work\SeowoncarASP\bin\images\services01.jpg

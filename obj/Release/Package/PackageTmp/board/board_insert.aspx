@@ -38,6 +38,15 @@
                                 <asp:Label ID="Label3" runat="server" Text="문의 내용" AssociatedControlID="txtCONTENT_BOARD"></asp:Label>
                                 <asp:TextBox ID="txtCONTENT_BOARD" runat="server" CssClass="form-control" required="" TextMode="MultiLine" Height="200px"></asp:TextBox>
                             </div>
+                            <div class="form-group mt-3" id="divPASS1" runat="server">
+                                <asp:Label ID="Label4" runat="server" Text="비밀번호" AssociatedControlID="txtPASSWORD"></asp:Label>
+                                <asp:TextBox ID="txtPASSWORD" TextMode="Password" runat="server" CssClass="form-control" required="" ></asp:TextBox>
+                            </div>
+                            <div class="form-group mt-3"  id="divPASS2" runat="server">
+                                <asp:Label ID="Label5" runat="server" Text="비밀번호 확인" AssociatedControlID="txtPASSWORD2"></asp:Label>
+                                <asp:TextBox ID="txtPASSWORD2" TextMode="Password" runat="server" CssClass="form-control" required="" ></asp:TextBox>
+                                <asp:Label ID="lblPASSWORD_ERROR" runat="server" Text="" CssClass="validate"></asp:Label>
+                            </div>
                             <div class="text-center">
                                 <button type="submit">작성완료</button>
                             </div>
