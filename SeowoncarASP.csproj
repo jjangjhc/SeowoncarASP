@@ -131,7 +131,10 @@
     <Content Include="images\services01.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="naver90bdbe9aad88fda874792620cf5e881b.html" />
+    <Content Include="naverb2bf229e940d700c878eab975b23141a.html" />
     <Content Include="Portfolio.aspx" />
+    <Content Include="robots.txt" />
     <Content Include="Services.aspx" />
     <Content Include="About.aspx" />
     <Content Include="about.html" />
@@ -325,6 +328,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="services.html" />
     <Content Include="Site.Master" />
+    <Content Include="sitemap.xml" />
     <Content Include="team.html" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />

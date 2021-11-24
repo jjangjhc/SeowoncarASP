@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="SeowoncarASP.Admin.SignUp" %>
+﻿<%@ Page Title="서원폐차장 회원가입" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="SeowoncarASP.Admin.SignUp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHeader" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">

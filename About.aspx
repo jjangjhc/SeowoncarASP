@@ -1,4 +1,4 @@
-﻿<%@ Page Title="서원폐차장" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="SeowoncarASP.About" %>
+﻿<%@ Page Title="서원폐차장 소개" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="SeowoncarASP.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 

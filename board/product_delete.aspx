@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="product_delete.aspx.cs" Inherits="SeowoncarASP.board.product_delete" validateRequest="false" %>
+﻿<%@ Page Title="서원폐차장 상품삭제" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="product_delete.aspx.cs" Inherits="SeowoncarASP.board.product_delete" validateRequest="false" %>
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderHeader" runat="server">

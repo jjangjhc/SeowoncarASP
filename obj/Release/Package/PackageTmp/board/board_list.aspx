@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="board_list.aspx.cs" Inherits="SeowoncarASP.board.board_list" %>
+﻿<%@ Page Title="서원폐차장 문의게시판" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="board_list.aspx.cs" Inherits="SeowoncarASP.board.board_list" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHeader" runat="server">
     <link href="css/table.css" rel="stylesheet" />
 </asp:Content>
