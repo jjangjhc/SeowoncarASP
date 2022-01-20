@@ -67,3 +67,83 @@ function fnPasswordCheck() {
     
 
 }
+
+
+function fnImageChange(str, num) {
+
+    
+    let imgs = document.getElementsByTagName('img');
+    let i = 0;
+
+    
+
+    for (let im of imgs) {
+        
+        if (im.id.search('MainContent_img') >= 0) {
+            i++;
+        }
+    }
+
+
+
+
+
+    if (str == 'next') {
+        if (num + 2 > i) {
+
+            
+            return;
+        }
+
+        let img = document.getElementById('MainContent_img' + num);
+        let imgNext = document.getElementById('MainContent_img' + (num+1));
+        let imgTemp = '';
+
+        imgTemp = imgNext.src
+        imgNext.src = img.src;
+        img.src = imgTemp;
+
+    } else if (str=='pre'){
+
+        if (num <= 1) {
+            return;
+        }
+
+        let img = document.getElementById('MainContent_img' + num);
+        let imgPre = document.getElementById('MainContent_img' + (num - 1));
+        let imgTemp = '';
+
+        imgTemp = imgPre.src
+        imgPre.src = img.src;
+        img.src = imgTemp;
+
+    }
+
+
+    //값 구해서 txt상자에 넣기
+    let imgChangeText = document.getElementById('MainContent_ImageChange');
+    imgChangeText.value = '';
+
+    for (let im of imgs) {
+
+        if (im.id.search('MainContent_img') >= 0) {
+            imgChangeText.value += ';' + im.src;
+        }
+    }
+
+}
+
+
+
+
+function fnUpdateSubmit(){
+
+    let retVal = confirm("수정 하시겠습니까?");
+    if (retVal == true) {
+        document.forms[0].submit();
+    } else {
+        return;
+    }
+
+}
+

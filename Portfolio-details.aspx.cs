@@ -108,12 +108,13 @@ namespace SeowoncarASP
                     int iCount = 0;
                     foreach(FileInfo fi in fiImageArray)
                     {
+                        
                         if (iCount == 0) {
                             iCount++;
                             continue; 
                         }
 
-                        sbTagImage.AppendLine(string.Format("<img src = \"board/upload/{0}/{1}/{2}_{3}.jpg\" class=\"img-fluid\" alt=\"\">",sYear,sMonth,sImageName, iCount));
+                        sbTagImage.AppendLine(string.Format("<img src = \"board/upload/{0}/{1}/{2}_{3}"+ fi.Extension + "\" class=\"img-fluid\" alt=\"\">",sYear,sMonth,sImageName, iCount));
                         iCount++;
                     }
                     imgParent.InnerHtml = sbTagImage.ToString();
