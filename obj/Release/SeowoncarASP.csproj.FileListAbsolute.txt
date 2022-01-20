@@ -69,9 +69,9 @@ D:\work\SeowoncarASP\bin\Microsoft.AspNet.FriendlyUrls.xml
 D:\work\SeowoncarASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\work\SeowoncarASP\bin\ko\System.Web.Optimization.resources.dll
 D:\work\SeowoncarASP\bin\ko\Microsoft.AspNet.FriendlyUrls.resources.dll
-D:\work\SeowoncarASP\obj\Release\SeowoncarASP.csprojAssemblyReference.cache
 D:\work\SeowoncarASP\obj\Release\SeowoncarASP.csproj.CoreCompileInputs.cache
 D:\work\SeowoncarASP\obj\Release\SeowoncarASP.csproj.CopyComplete
 D:\work\SeowoncarASP\obj\Release\SeowoncarASP.dll
 D:\work\SeowoncarASP\obj\Release\SeowoncarASP.pdb
 D:\work\SeowoncarASP\bin\images\services01.jpg
+D:\work\SeowoncarASP\obj\Release\SeowoncarASP.csproj.AssemblyReference.cache

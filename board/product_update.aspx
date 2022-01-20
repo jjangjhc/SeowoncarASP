@@ -9,6 +9,10 @@
     <!-- Main CSS-->
     <link href="css/main.css" rel="stylesheet" media="all">
 
+    
+
+
+
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
@@ -128,31 +132,39 @@
                         </div>
 
                     <div id="MainContent_divProuduct" class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                                <asp:Image ID="Image1" runat="server" />
+                        <div class="row" id ="divImages" runat="server">
+                            <div class="col-lg-4 col-md-6">
+                                <asp:Image ID="Image1" runat="server"/>
                             </div>
-                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                                <asp:Image ID="Image2" runat="server" />
+                            <div class="col-lg-4 col-md-6">
+                                <asp:Image ID="Image2" runat="server"  class="col-md-12" />
+                                <div Style="height: 30px; background-color: transparent; text-align:left;display:block;" class="col-md-12" >
+                                    <asp:Button Text="<<앞으로" runat="server" Style="height: 30px; width:80px;  background-color: red; display: inline-block"  />
+                                    <asp:Button Text="뒤로>>" runat="server" Style="height: 30px; width:80px; background-color: red; display: inline-block" />
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                            <div class="col-lg-4 col-md-6">
                                 <asp:Image ID="Image3" runat="server" />
                             </div>
-                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                            <div class="col-lg-4 col-md-6">
                                 <asp:Image ID="Image4" runat="server" />
                             </div>
-                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                            <div class="col-lg-4 col-md-6">
                                 <asp:Image ID="Image5" runat="server" />
                             </div>
-                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                            <div class="col-lg-4 col-md-6">
                                 <span>이미지 수정은 삭제 후 생성</span>
+                               
                             </div>
                         </div>
+
+
                     </div>
 
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn--radius-2 btn--blue-2" type="submit">수정 완료</button>
+                     <asp:HiddenField id="ImageChange" value="1234" runat="server" />
+                    <button class="btn btn--radius-2 btn--blue-2" type="button" onclick="fnUpdateSubmit();">수정 완료</button>
                 </div>
             </div>
         </div>

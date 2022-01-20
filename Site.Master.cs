@@ -9,6 +9,7 @@ namespace SeowoncarASP
 {
     public partial class SiteMaster : MasterPage
     {
+        public string sCanonical = HttpContext.Current.Request.Url.AbsoluteUri;
         protected void Page_Load(object sender, EventArgs e)
         {
 

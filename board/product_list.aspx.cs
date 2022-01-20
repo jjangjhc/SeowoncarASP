@@ -67,7 +67,7 @@ namespace SeowoncarASP.board
                     string sYEAR = reader2["YEAR"].ToString();
                     string sPath = CCM.fnUploadPath(Request.Url.ToString());
 
-                    string sImgFullPath = CCM.fnGetImgFullPath(sPath, sPRODUCTID, 0);
+                    string sImgFullPath = CCM.fnGetImgFullPath(sPath, sPRODUCTID)[0];
 
 
                     XmlElement xDivTop = xDoc.CreateElement("div");

@@ -13,6 +13,7 @@ namespace SeowoncarASP
         [Obsolete]
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.MetaDescription = "고객센터에서 다양한 방법으로 연결하세요.";
 
             if (!IsPostBack)
             {

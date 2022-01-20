@@ -16,12 +16,16 @@ namespace SeowoncarASP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            this.MetaDescription = "부품 상세보기 입니다.";
+
             CommonClassMain ccm = new CommonClassMain();
 
             if (!IsPostBack)
             {
 
                 string s_productid = Request["productid"];  //Get
+                
 
                 if (s_productid == null)
                 {
@@ -81,7 +85,7 @@ namespace SeowoncarASP
                     }
                     reader.Close();
 
-
+                    this.MetaDescription = "부품 상세보기 - " + lblMANUFACTURER.Text +"-" +  lblNAME.Text + "-" + lblYEAR.Text;
 
 
                     //이미지 넣기

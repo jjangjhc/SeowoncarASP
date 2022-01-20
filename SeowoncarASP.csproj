@@ -45,6 +45,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -117,6 +118,7 @@
     <Content Include="board\board_list.aspx" />
     <Content Include="board\board_list_check.aspx" />
     <Content Include="board\css\table.css" />
+    <Content Include="board\js\product_insert.js" />
     <Content Include="board\product_list.aspx" />
     <Content Include="board\product_delete.aspx" />
     <Content Include="board\product_update.aspx" />
@@ -329,6 +331,7 @@
     <Content Include="services.html" />
     <Content Include="Site.Master" />
     <Content Include="sitemap.xml" />
+    <Content Include="sitemap_old.xml" />
     <Content Include="team.html" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />

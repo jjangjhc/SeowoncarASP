@@ -130,6 +130,7 @@
                             </div>
                         </div>
                     -->
+                    <!--
                         <div class="form-row">
                             <div class="name">이미지첨부1</div>
                             <div class="value">
@@ -138,7 +139,7 @@
                                     <label class="label--file" for="MainContent_FileUpload1">Choose file</label>
                                     <span class="input-file__info">No file chosen</span>
                                 </div>
-                                <!--<div class="label--desc">이미지 사이즈가 크면 자동조절됨(아직안됨)</div>-->
+                                
                             </div>
                         </div>
                         <div class="form-row">
@@ -149,7 +150,7 @@
                                     <label class="label--file" for="MainContent_FileUpload2">Choose file</label>
                                     <span class="input-file__info">No file chosen</span>
                                 </div>
-                                <!--<div class="label--desc">이미지 사이즈가 크면 자동조절됨(아직안됨)</div>-->
+                                
                             </div>
                         </div>
                         <div class="form-row">
@@ -160,7 +161,7 @@
                                     <label class="label--file" for="MainContent_FileUpload3">Choose file</label>
                                     <span class="input-file__info">No file chosen</span>
                                 </div>
-                                <!--<div class="label--desc">이미지 사이즈가 크면 자동조절됨(아직안됨)</div>-->
+                                
                             </div>
                         </div>
                         <div class="form-row">
@@ -171,7 +172,7 @@
                                     <label class="label--file" for="MainContent_FileUpload4">Choose file</label>
                                     <span class="input-file__info">No file chosen</span>
                                 </div>
-                                <!--<div class="label--desc">이미지 사이즈가 크면 자동조절됨(아직안됨)</div>-->
+                                
                             </div>
                         </div>
                         <div class="form-row">
@@ -182,13 +183,28 @@
                                     <label class="label--file" for="MainContent_FileUpload5">Choose file</label>
                                     <span class="input-file__info">No file chosen</span>
                                 </div>
-                                <!--<div class="label--desc">이미지 사이즈가 크면 자동조절됨(아직안됨)</div>-->
+                                
+                            </div>
+                        </div>
+                    -->
+                        <div class="form-row">
+                            <div class="name">이미지첨부</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <asp:FileUpload CssClass="input-file" ID="FileUpload6" runat="server" AllowMultiple="True" />
+                                    <label class="label--file" for="MainContent_FileUpload6">Choose file</label>
+                                    <span class="input-file__info">No file chosen</span>
+                                </div>
+                                <div class="label--desc">이미지 사이즈가 크면 자동조절됨(가로1100px), 다중파일 선택 가능</div>
                             </div>
                         </div>
                         
                 </div>
                 <div class="card-footer">
                     <button class="btn btn--radius-2 btn--blue-2" type="submit">등록완료</button>
+                </div>
+                <div class="card-footer">
+                    <asp:Label ID="Label1" runat="server" Text="-"></asp:Label>
                 </div>
             </div>
         </div>

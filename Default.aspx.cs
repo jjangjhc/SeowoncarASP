@@ -11,7 +11,7 @@ namespace SeowoncarASP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.MetaDescription = "서원폐차장에서 다양한 폐차정보와 다양한 중고 부품을 만나 보세요.";
         }
     }
 }

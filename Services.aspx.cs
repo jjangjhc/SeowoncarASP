@@ -11,7 +11,7 @@ namespace SeowoncarASP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.MetaDescription = "폐차안내 사항입니다. 꼼꼼히 살피면 많은 도움이 됩니다.";
         }
     }
 }

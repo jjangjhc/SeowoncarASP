@@ -1,4 +1,4 @@
-﻿<%@ Page Title="서원폐차장" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SeowoncarASP._Default" %>
+﻿<%@ Page Title="서원폐차장" Description="환영합니다 서원폐차장에서 다양한 폐차정보와 다양한 중고 부품을 만나 보세요" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SeowoncarASP._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 

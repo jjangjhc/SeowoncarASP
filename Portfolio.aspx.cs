@@ -13,9 +13,13 @@ namespace SeowoncarASP
 {
     public partial class Portfolio : Page
     {
+        
+
         CommonClassMain CCM = new CommonClassMain();
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.MetaDescription = "다양한 부품을 만나보세요.";
+            
 
             if (!IsPostBack)
             {
@@ -158,7 +162,7 @@ namespace SeowoncarASP
 
                                 string sPath = CCM.fnUploadPath(Request.Url.ToString());
 
-                                string sImgFullPath = CCM.fnGetImgFullPath(sPath, sPRODUCTID, 0);
+                                string sImgFullPath = CCM.fnGetImgFullPath(sPath, sPRODUCTID)[0];
 
 
                                 XmlElement xeAImg = xDoc.CreateElement("a");

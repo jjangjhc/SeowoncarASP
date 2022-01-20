@@ -210,7 +210,7 @@ namespace SeowoncarASP
             return DecryptedData;
         }
 
-        internal string fnGetImgFullPath(string sPath, string sPRODUCTID, int iReturnImg)
+        internal List<string> fnGetImgFullPath(string sPath, string sPRODUCTID)
         {
 
             string sYear = sPRODUCTID.Substring(0, 4);
@@ -221,6 +221,13 @@ namespace SeowoncarASP
 
 
             DirectoryInfo diPathImage = new DirectoryInfo(sPath);
+            //없으면 만들기
+            if (!diPathImage.Exists)
+            {
+                diPathImage.Create();
+            }
+
+
             string sCondition = string.Format("{0}_*.*", sImageName);
             FileInfo[] fiImageArray = diPathImage.GetFiles(sCondition, SearchOption.TopDirectoryOnly);
 
@@ -238,28 +245,39 @@ namespace SeowoncarASP
 
             }
 
+            List<string> listReturn = new List<string>();
+
             string sImgFullPath = string.Empty;
             if (fiImageArray.Length < 1)
             {
                 //이미지 기본값 출력
                 //sImgFullPath = "/board/upload/" + sYear + "/" + sMonth + "/062250123_0.jpg";
                 sImgFullPath = "/images/no_img.png";
+                listReturn.Add(sImgFullPath);
             }
             else
             {
                 //원하는 값 출력
-                try
+                foreach(FileInfo fi in fiImageArray)
                 {
-                    sImgFullPath = "/board/upload/" + sYear + "/" + sMonth + "/" + fiImageArray[iReturnImg].Name;
+
+                    try
+                    {
+                        sImgFullPath = "/board/upload/" + sYear + "/" + sMonth + "/" + fi.Name;
+                        listReturn.Add(sImgFullPath);
+                    }
+                    catch
+                    {
+                        //해당 위치에 값이 없어도 이미지 기본값 출력
+                        //sImgFullPath = "/board/upload/" + sYear + "/" + sMonth + "/062250123_0.jpg";
+                        sImgFullPath = "/images/no_img.png";
+                        listReturn.Add(sImgFullPath);
+                    }
                 }
-                catch
-                {
-                    //해당 위치에 값이 없어도 이미지 기본값 출력
-                    //sImgFullPath = "/board/upload/" + sYear + "/" + sMonth + "/062250123_0.jpg";
-                    sImgFullPath = "/images/no_img.png";
-                }
+
+
             }
-            return sImgFullPath;
+            return listReturn;
         }
     }
 }
