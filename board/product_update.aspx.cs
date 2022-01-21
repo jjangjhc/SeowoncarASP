@@ -16,6 +16,7 @@ namespace SeowoncarASP.board
         CommonClassMain CCM = new CommonClassMain();
         protected void Page_Load(object sender, EventArgs e)
         {
+            chkImport.InputAttributes.Add("class", "input--style-6");
 
             if (!IsPostBack)
             {
@@ -33,6 +34,7 @@ namespace SeowoncarASP.board
 
                     StringBuilder sbQuery2 = new StringBuilder();
                     sbQuery2.AppendLine(" SELECT [PRODUCTID] ");
+                    sbQuery2.AppendLine("       ,[CATEGORY] ");
                     sbQuery2.AppendLine("       ,[MANUFACTURER] ");
                     sbQuery2.AppendLine("       ,[NAME] ");
                     sbQuery2.AppendLine("       ,[YEAR] ");
@@ -56,6 +58,7 @@ namespace SeowoncarASP.board
 
                     while (reader.Read())
                     {
+                        chkImport.Checked = reader["CATEGORY"].ToString().Equals("수입차") ? true : false;
                         txtMANUFACTURER.Text = reader["MANUFACTURER"].ToString();
                         txtMOREINFO.Text = reader["MOREINFO"].ToString();
                         txtNAME.Text = reader["NAME"].ToString();
@@ -82,6 +85,7 @@ namespace SeowoncarASP.board
 
                             Panel p = new Panel();
                             p.CssClass = "col-lg-4 col-md-6";
+                            p.Attributes.Add("style", "margin-bottom: 10px;");
 
                             Image img = new Image();
                             img.ImageUrl = s;
@@ -159,7 +163,8 @@ namespace SeowoncarASP.board
                 StringBuilder sbQuery = new StringBuilder();
                 sbQuery.AppendLine("UPDATE [seowoncarasp].[SEOWON_PRODUCT]  ");
                 sbQuery.AppendLine("   SET ");
-                sbQuery.AppendLine("       [MANUFACTURER] = @MANUFACTURER ");
+                sbQuery.AppendLine("       [CATEGORY] = @CATEGORY ");
+                sbQuery.AppendLine("      ,[MANUFACTURER] = @MANUFACTURER ");
                 sbQuery.AppendLine("      ,[NAME] = @NAME ");
                 sbQuery.AppendLine("      ,[YEAR] = @YEAR ");
                 sbQuery.AppendLine("      ,[VIN] = @VIN ");
@@ -175,6 +180,7 @@ namespace SeowoncarASP.board
                 SqlCommand cmd = new SqlCommand(sbQuery.ToString());
                 cmd.Parameters.AddWithValue("@PRODUCTID", Session["productid"].ToString());
                 cmd.Parameters.AddWithValue("@MANUFACTURER", txtMANUFACTURER.Text);
+                cmd.Parameters.AddWithValue("@CATEGORY", chkImport.Checked ? "수입차" : "국산차") ;
                 cmd.Parameters.AddWithValue("@NAME", txtNAME.Text);
                 cmd.Parameters.AddWithValue("@YEAR", txtYEAR.Text);
                 cmd.Parameters.AddWithValue("@VIN", txtVIN.Text);
