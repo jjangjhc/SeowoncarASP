@@ -38,13 +38,25 @@ namespace SeowoncarASP
 
         private void fnGenerateCategory()
         {
-            
+
+
+
+            StringBuilder sbQueryCate = new StringBuilder();
+            sbQueryCate.AppendLine("SELECT DISTINCT [CATEGORY] ");
+            sbQueryCate.AppendLine(" FROM [seowoncarasp].[SEOWON_PRODUCT] ");
+
+
+            SqlCommand scCmdCate = new SqlCommand(sbQueryCate.ToString());
+            SqlDataReader readerCate = CCM.fnQuerySQL(scCmdCate, "SELECT");
+
 
 
 
             StringBuilder sbQuery = new StringBuilder();
-            sbQuery.AppendLine("SELECT DISTINCT [MANUFACTURER] ");
+            sbQuery.AppendLine("SELECT [CATEGORY], [MANUFACTURER] ");
             sbQuery.AppendLine(" FROM [seowoncarasp].[SEOWON_PRODUCT] ");
+            sbQuery.AppendLine("GROUP BY [CATEGORY], [MANUFACTURER] ");
+            
 
             SqlCommand scCmd = new SqlCommand(sbQuery.ToString());
             SqlDataReader reader = CCM.fnQuerySQL(scCmd, "SELECT");
@@ -52,6 +64,7 @@ namespace SeowoncarASP
 
             StringBuilder sbQuery2 = new StringBuilder();
             sbQuery2.AppendLine(" SELECT [PRODUCTID] ");
+            sbQuery2.AppendLine("       ,[CATEGORY] ");
             sbQuery2.AppendLine("       ,[MANUFACTURER] ");
             sbQuery2.AppendLine("       ,[NAME] ");
             sbQuery2.AppendLine("       ,[YEAR] ");
@@ -66,6 +79,7 @@ namespace SeowoncarASP
             sbQuery2.AppendLine("       ,[LASTMODIFIER] ");
             sbQuery2.AppendLine("       ,[LASTMODIFIEDTIME] ");
             sbQuery2.AppendLine("   FROM [seowoncarasp].[SEOWON_PRODUCT] ");
+            sbQuery2.AppendLine("   ORDER BY [MANUFACTURER] ASC ");
 
 
             SqlCommand scCmd2 = new SqlCommand(sbQuery2.ToString());
@@ -95,26 +109,85 @@ namespace SeowoncarASP
                     XmlAttribute attLI_Class = xDoc.CreateAttribute("class");
                     attLI_Class.Value = "filter-active";
 
+
+                    XmlAttribute attIDx = xDoc.CreateAttribute("id");
+                    attIDx.Value = "allCar";
+
+
                     xeLI_ALL.Attributes.Append(attLI_ALL);
                     xeLI_ALL.Attributes.Append(attLI_Class);
+                    xeLI_ALL.Attributes.Append(attIDx);
                     xeLI_ALL.InnerText = "전체";
                     xn.AppendChild(xeLI_ALL);
+
+
+                    //span 넣기
+                    XmlElement xeSpan = xDoc.CreateElement("span");
+                    xeSpan.InnerText = "|";
+                    XmlAttribute xattrx = xDoc.CreateAttribute("style");
+                    xattrx.Value = "font-size: xx-small;";
+                    xeSpan.Attributes.Append(xattrx);
+                    xn.AppendChild(xeSpan);
+
+
+                    while (readerCate.Read())
+                    {
+                        string sCATEGORY = readerCate["CATEGORY"].ToString();
+                        string sCateEng = sCATEGORY.Equals("국산차") ? "Domestic" : "Import";
+
+                        XmlElement xeLI = xDoc.CreateElement("li");
+                        XmlAttribute attLI = xDoc.CreateAttribute("data-filter");
+                        attLI.Value = ".filter-" + sCATEGORY;
+
+
+                        XmlAttribute attID = xDoc.CreateAttribute("id");
+                        attID.Value = sCateEng;
+
+                        xeLI.Attributes.Append(attLI);
+                        xeLI.Attributes.Append(attID);
+                        xeLI.InnerText = sCATEGORY;
+                        xn.AppendChild(xeLI);
+                    }
+                    readerCate.Close();
+
+                    //span 또 넣기
+                    XmlElement xeSpan2 = xDoc.CreateElement("span");
+                    xeSpan2.InnerText = "|";
+                    XmlAttribute xattr2 = xDoc.CreateAttribute("style");
+                    xattr2.Value = "font-size: xx-small;";
+                    xeSpan2.Attributes.Append(xattr2);
+
+                    
+                    xn.AppendChild(xeSpan2);
+
+
+
 
                     while (reader.Read())
                     {
                         string sMANUFACTURER = reader["MANUFACTURER"].ToString();
+                        string sCATEGORY = reader["CATEGORY"].ToString();
+                        string sCateEng = sCATEGORY.Equals("국산차") ? "Domestic" : "Import";
 
                         XmlElement xeLI = xDoc.CreateElement("li");
                         XmlAttribute attLI = xDoc.CreateAttribute("data-filter");
-                        attLI.Value = ".filter-" + sMANUFACTURER;
+                        attLI.Value = string.Format(".filter-{0}",sMANUFACTURER);
+
+                        XmlAttribute attClass = xDoc.CreateAttribute("class");
+                        attClass.Value = sCateEng;
+
                         xeLI.Attributes.Append(attLI);
+                        xeLI.Attributes.Append(attClass);
                         xeLI.InnerText = sMANUFACTURER;
                         xn.AppendChild(xeLI);
                     }
-
                     reader.Close();
 
-                }else if (xnTopDIV.Attributes["class"].Value.Equals("row portfolio-container"))
+
+
+
+                }
+                else if (xnTopDIV.Attributes["class"].Value.Equals("row portfolio-container"))
                 {
                     XmlNode xn = xnTopDIV;
                     xn.RemoveAll();
@@ -138,13 +211,14 @@ namespace SeowoncarASP
 
                     while (reader2.Read())
                     {
+                        string sCATEGORY = reader2["CATEGORY"].ToString();
                         string sMANUFACTURER = reader2["MANUFACTURER"].ToString();
                         string sPRODUCTID = reader2["PRODUCTID"].ToString();
                         string sNAME = reader2["NAME"].ToString();
 
                         XmlElement xlDIV = xDoc.CreateElement("div");
                         XmlAttribute attClass = xDoc.CreateAttribute("class");
-                        attClass.Value = "col-lg-4 col-md-6 filter-" + sMANUFACTURER;
+                        attClass.Value = string.Format("col-lg-4 col-md-6 filter-{0} filter-{1}", sMANUFACTURER, sCATEGORY);
                         xlDIV.Attributes.Append(attClass);
                         xn.AppendChild(xlDIV);
 
@@ -213,7 +287,7 @@ namespace SeowoncarASP
                                         //xlA.Attributes.Append(attdata_gall);
                                         //xlA.Attributes.Append(attclass7);
                                         xlA.Attributes.Append(atttitle);
-                                        xlA.InnerText = sMANUFACTURER + "-" + sNAME;
+                                        xlA.InnerText = string.Format("{0} - {1}", sMANUFACTURER, sNAME);
 
                                         xlH3.AppendChild(xlA);
 
@@ -301,3 +375,4 @@ namespace SeowoncarASP
     }
 
 }
+
