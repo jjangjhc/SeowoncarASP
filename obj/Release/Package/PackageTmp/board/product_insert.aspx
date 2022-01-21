@@ -43,6 +43,13 @@
                             <div class="name"><a href="javascript:fnAutoInsert()">제조사</a></div>
                             <div class="value">
                                 <asp:TextBox ID="txtMANUFACTURER" runat="server" CssClass ="input--style-6" placeholder="현대" required></asp:TextBox>
+                                
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">수입차</div>
+                            <div class="value">
+                                <asp:CheckBox ID="chkImport" runat="server" Checked =true />
                             </div>
                         </div>
                         <div class="form-row">

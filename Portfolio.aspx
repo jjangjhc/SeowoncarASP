@@ -214,6 +214,13 @@
             $(".Import").show();
             $(".Domestic").hide();
         })
+        $("#allCar").on("click", function () {
+            $(".Import").show();
+            $(".Domestic").show();
+        })
+
+        
+
     })
       </script>
 

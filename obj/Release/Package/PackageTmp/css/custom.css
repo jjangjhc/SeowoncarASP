@@ -358,3 +358,12 @@ section {
 .subMenu a {
     color:unset;
 }
+
+
+
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 0 35px 0;
+    list-style: none;
+    text-align: left;
+}
