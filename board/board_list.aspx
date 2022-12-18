@@ -36,6 +36,7 @@
 
 
 
+
         <section id="secContentBody" runat="server" class="contact aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
             <div class="container">
                 <div class="row">
@@ -55,6 +56,13 @@
                             </div>
                             <div class="text-center" style="display:none;" >
                                 <button type="button">작성완료</button>
+                            </div>
+                            <div class="text-right" >
+
+                                <button runat="server" id="btnDelete2" >삭제</button>
+                                
+                                <asp:HiddenField ID="hfDeleteNum" runat="server" />
+                                <iframe src="about:blank" id="ifrCheck_DELETE" name="ifrCheck_DELETE" style="display:none;"></iframe>
                             </div>
                         </div>
                     </div>
@@ -111,7 +119,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div>z
 
         </section>
 

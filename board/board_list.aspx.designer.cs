@@ -78,6 +78,24 @@ namespace SeowoncarASP.board
         protected global::System.Web.UI.WebControls.TextBox txtCONTENT_BOARD;
 
         /// <summary>
+        /// btnDelete2 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnDelete2;
+
+        /// <summary>
+        /// hfDeleteNum 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfDeleteNum;
+
+        /// <summary>
         /// tbody 컨트롤입니다.
         /// </summary>
         /// <remarks>

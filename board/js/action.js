@@ -34,12 +34,11 @@ function fnDeleteProductid(sProductid) {
 
 }
 
+
 function fnBoardOpen(sProductid) {
     $("#hftempid").val(sProductid);
     //아이디 받고 모달창 열기
     fnModalOpen();
-
-    
 
 }
 

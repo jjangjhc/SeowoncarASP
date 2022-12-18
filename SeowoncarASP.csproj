@@ -116,6 +116,7 @@
     <Content Include="assets\img\service-details-6.jpg" />
     <Content Include="board\board_insert.aspx" />
     <Content Include="board\board_list.aspx" />
+    <Content Include="board\board_list_delete.aspx" />
     <Content Include="board\board_list_check.aspx" />
     <Content Include="board\css\table.css" />
     <Content Include="board\js\product_insert.js" />
@@ -373,6 +374,13 @@
     </Compile>
     <Compile Include="board\board_list.aspx.designer.cs">
       <DependentUpon>board_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="board\board_list_delete.aspx.cs">
+      <DependentUpon>board_list_delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="board\board_list_delete.aspx.designer.cs">
+      <DependentUpon>board_list_delete.aspx</DependentUpon>
     </Compile>
     <Compile Include="board\board_list_check.aspx.cs">
       <DependentUpon>board_list_check.aspx</DependentUpon>

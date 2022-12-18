@@ -23,7 +23,7 @@ namespace SeowoncarASP.board
             int iSessionPOWER = 0;
             Int32.TryParse(sSessionPOWER, out iSessionPOWER);
 
-
+ 
             
 
             if (!IsPostBack)
@@ -151,8 +151,8 @@ namespace SeowoncarASP.board
             }
             else
             {
-                string sBOARD_ID = Request["hfBOARD_ID"].ToString(); 
-
+                string sBOARD_ID = Request["hfBOARD_ID"].ToString();
+                string sPAGE_NO = Request["page_no"] != null ? Request["page_no"].ToString() : "1";
 
 
                 secContentBody.Visible = true;
@@ -201,6 +201,8 @@ namespace SeowoncarASP.board
                     string sREGDATE = reader2["REGDATE"].ToString();
                     string sREADNUM = reader2["READNUM"].ToString();
                     string sRECOMMEND = reader2["RECOMMEND"].ToString();
+                    
+               
 
                     txtTITLE.Text = sTITLE;
                     txtCONTENT_BOARD.Text = sCONTENT_BOARD;
@@ -210,9 +212,13 @@ namespace SeowoncarASP.board
                 }
                 reader2.Close();
 
+
+
+                btnDelete2.Attributes.Add("type", "button");
+                btnDelete2.Attributes.Add("onclick", $"if(confirm('삭제 하시겠습니까?')==true){"{"}window.open('board_list_delete?board_id={sBOARD_ID}&page_no={sPAGE_NO}','ifrCheck_DELETE');{"}"}");
+                btnDelete2.InnerText = "삭제";
                 
-
-
+                
             }
         }
 
