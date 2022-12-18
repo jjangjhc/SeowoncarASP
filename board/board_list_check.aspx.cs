@@ -107,7 +107,7 @@ namespace SeowoncarASP.board
                 if (bSameUSER_ID)
                 {
                     sReturnValue += string.Format("parent.document.getElementById('hfBOARD_ID').value = '{0}'", iID);
-                    sReturnValue = Environment.NewLine + "parent.document.forms[0].submit();";
+                    sReturnValue += Environment.NewLine + "parent.document.forms[0].submit();";
                 }
                 else
                 {
